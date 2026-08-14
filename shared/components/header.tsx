@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { PrimaryButton } from "./button";
+import { usePathname } from "next/navigation";
+import { GetQuoteButton } from "./getQuoteButton";
 
 const AboveHeader = () => {
   return (
@@ -104,18 +108,20 @@ const AboveHeader = () => {
 };
 
 export default function Header() {
+  const pathName = usePathname();
+  const isActive = (path: string) => pathName === path;
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md  rounded-4xl">
+    <header className=" top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md  rounded-4xl">
       <AboveHeader />
       <div className="mx-auto flex h-40  max-w-8xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/full_logo.png"
+            src="/full_logo.jpeg"
             alt="Move Mate Relocations NZ"
             width={350}
             height={80}
-            className=" w-[210px] object-contain"
+            className=" object-contain"
             priority
           />
         </Link>
@@ -124,7 +130,7 @@ export default function Header() {
         <nav className="hidden items-center gap-8 lg:flex">
           <Link
             href="/"
-            className="relative py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
+            className={`relative py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/") ? "text-primary border-b-[3px]" : ""}`}
           >
             Home
             <span className="absolute bottom-0 left-0 h-0.5 w-full bg-light-blue" />
@@ -132,35 +138,21 @@ export default function Header() {
 
           <Link
             href="/about"
-            className="py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
+            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/about") ? "text-primary border-b-[3px]" : ""}`}
           >
             About Us
           </Link>
 
           <Link
             href="/services"
-            className="py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
+            className={`py-7 text-[15px] font-semibold transition-colors hover:text-light-blue ${isActive("/services") ? "text-primary border-b-[3px]" : ""}`}
           >
             Services
           </Link>
 
           <Link
-            href="/process"
-            className="py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
-          >
-            Our Process
-          </Link>
-
-          <Link
-            href="/testimonials"
-            className="py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
-          >
-            Testimonials
-          </Link>
-
-          <Link
             href="/contact"
-            className="py-7 text-[15px] font-semibold text-primary transition-colors hover:text-light-blue"
+            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/contact") ? "text-primary border-b-[3px]" : ""}`}
           >
             Contact Us
           </Link>
@@ -198,9 +190,7 @@ export default function Header() {
           </a>
 
           {/* CTA */}
-          <PrimaryButton isLink linkTo="/contact">
-            Get A Quote
-          </PrimaryButton>
+          <GetQuoteButton />
         </div>
 
         {/* Mobile menu */}
