@@ -16,7 +16,7 @@ export const PrimaryButton = ({
     return (
       <Link
         href={linkTo ?? "/"}
-        className="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary transition-colors duration-300"
+        className="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary transition-colors duration-300 max-w-[160px] text-center"
       >
         {children}
       </Link>
