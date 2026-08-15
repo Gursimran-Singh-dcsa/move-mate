@@ -57,13 +57,13 @@ const items = [
 export const Services = () => {
   const [current, setCurrent] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scrollTo = (index: number) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    container.scrollTo({
-      left: index * container.offsetWidth,
+    itemRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
+      inline: "center",
+      block: "nearest",
     });
     setCurrent(index);
   };
@@ -74,8 +74,18 @@ export const Services = () => {
   const onScroll = () => {
     const container = scrollRef.current;
     if (!container) return;
-    const index = Math.round(container.scrollLeft / container.offsetWidth);
-    setCurrent(index);
+    const center = container.scrollLeft + container.offsetWidth / 2;
+    let closest = 0;
+    let minDist = Infinity;
+    itemRefs.current.forEach((el, i) => {
+      if (!el) return;
+      const dist = Math.abs(el.offsetLeft + el.offsetWidth / 2 - center);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = i;
+      }
+    });
+    setCurrent(closest);
   };
 
   return (
@@ -92,15 +102,21 @@ export const Services = () => {
       </div>
 
       {/* Mobile carousel */}
-      <div className="relative w-full md:hidden">
+      <div className="relative w-full md:hidden scrollbar-hide">
         {/* Native-scrollable track with snap */}
         <div
           ref={scrollRef}
           onScroll={onScroll}
           className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide items-stretch gap-4 px-10 pb-8"
         >
-          {items.map((item, index) => (
-            <div key={index} className="w-full shrink-0 snap-center">
+          {items.map((item, i) => (
+            <div
+              key={item.imageAlt}
+              ref={(el) => {
+                itemRefs.current[i] = el;
+              }}
+              className="w-full shrink-0 snap-center"
+            >
               <ServicesComponent {...item} />
             </div>
           ))}
@@ -128,9 +144,9 @@ export const Services = () => {
 
         {/* Dots — overlaid at bottom */}
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
-          {items.map((_, i) => (
+          {items.map((item, i) => (
             <button
-              key={i}
+              key={item.imageAlt}
               onClick={() => scrollTo(i)}
               aria-label={`Go to slide ${i + 1}`}
               className={`h-2 rounded-full transition-all ${
@@ -143,8 +159,8 @@ export const Services = () => {
 
       {/* Desktop grid */}
       <div className="hidden w-full gap-6 p-6 md:grid md:grid-cols-3">
-        {items.map((item, index) => (
-          <ServicesComponent key={index} {...item} />
+        {items.map((item) => (
+          <ServicesComponent key={item.imageAlt} {...item} />
         ))}
       </div>
     </div>

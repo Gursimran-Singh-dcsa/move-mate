@@ -1,8 +1,8 @@
 import CountUp from './countUp';
 export const Statistics = () => {
   return (
-    <div className="flex mt-5 flex-col items-center justify-center gap-6 py-8 max-w-8xl">
-      <h2 className="text-3xl font-bold">
+    <div className="flex mt-5 flex-col items-center justify-center gap-6 py-8 px-3 max-w-8xl">
+      <h2 className="text-3xl font-bold text-center">
         We make moving simple, reliable and stress-free
       </h2>
 
