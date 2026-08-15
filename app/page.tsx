@@ -6,7 +6,12 @@ import StepsAndQuote from "@/shared/components/StepsAndQuote";
 export default function Home() {
   return (
     <div className="font-roboto  ">
-      <div className="relative overflow-hidden bg-[url(/nz_land.jpeg)] bg-cover bg-center min-h-[70vh] lg:min-h-screen">
+      <div
+        className="relative overflow-hidden bg-cover bg-center min-h-[70vh] lg:min-h-screen"
+        style={{
+          backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/nz_land.jpeg)`,
+        }}
+      >
         <div className="absolute inset-0 bg-black/70 z-0" />
         <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:px-16 lg:min-h-screen">
           {/* Heading */}

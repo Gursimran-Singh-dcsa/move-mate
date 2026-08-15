@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const Footer = () => {
   return (
     <div className="text-midnight-blue bg-white">
@@ -38,7 +40,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="lg:col-span-2 flex items-center justify-center lg:justify-start">
               <Image
-                src="/full_logo.jpeg"
+                src={`${bp}/full_logo.jpeg`}
                 alt="Move Mate Relocations NZ"
                 width={400}
                 height={400}
@@ -182,7 +184,7 @@ const Footer = () => {
                     className="transition-opacity hover:opacity-70"
                   >
                     <Image
-                      src="/facebook.png"
+                      src={`${bp}/facebook.png`}
                       alt="Facebook"
                       width={20}
                       height={20}
@@ -195,7 +197,7 @@ const Footer = () => {
                     className="transition-opacity hover:opacity-70"
                   >
                     <Image
-                      src="/instagram-optimized.svg"
+                      src={`${bp}/instagram-optimized.svg`}
                       alt="Instagram"
                       width={20}
                       height={20}
@@ -208,7 +210,7 @@ const Footer = () => {
                     className="transition-opacity hover:opacity-70"
                   >
                     <Image
-                      src="/whatsapp.svg"
+                      src={`${bp}/whatsapp.svg`}
                       alt="WhatsApp"
                       width={20}
                       height={20}

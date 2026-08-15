@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GetQuoteButton } from "./getQuoteButton";
@@ -85,7 +87,12 @@ const AboveHeader = () => {
             aria-label="Facebook"
             className="transition-colors hover:text-blue-300"
           >
-            <Image src="/facebook.png" alt="Facebook" width={18} height={18} />
+            <Image
+              src={`${bp}/facebook.png`}
+              alt="Facebook"
+              width={18}
+              height={18}
+            />
           </a>
 
           <a
@@ -94,7 +101,7 @@ const AboveHeader = () => {
             className="transition-colors hover:text-blue-300"
           >
             <Image
-              src="/instagram-optimized.svg"
+              src={`${bp}/instagram-optimized.svg`}
               alt="Instagram"
               width={18}
               height={18}
@@ -120,7 +127,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/full_logo.jpeg"
+            src={`${bp}/full_logo.jpeg`}
             alt="Move Mate Relocations NZ"
             width={350}
             height={80}

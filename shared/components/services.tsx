@@ -3,9 +3,11 @@
 import { useRef, useState } from "react";
 import ServicesComponent from "./serviceComponent";
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const items = [
   {
-    imagePath: "/house_relocation.jpeg",
+    imagePath: `${bp}/house_relocation.jpeg`,
     imageAlt: "House Relocation",
     title: "House Relocation",
     hashtags: ["#house", "#relocation", "#moving"],
@@ -13,7 +15,7 @@ const items = [
       "We provide comprehensive house relocation services, ensuring a smooth and stress-free move for your family.",
   },
   {
-    imagePath: "/office_relocation.jpeg",
+    imagePath: `${bp}/office_relocation.jpeg`,
     imageAlt: "Office Relocation",
     title: "Office Relocation",
     hashtags: ["#office", "#relocation", "#moving"],
@@ -21,7 +23,7 @@ const items = [
       "We provide comprehensive office relocation services, ensuring a smooth and stress-free move for your business.",
   },
   {
-    imagePath: "/warehouse_relocation.jpeg",
+    imagePath: `${bp}/warehouse_relocation.jpeg`,
     imageAlt: "Warehouse Relocation",
     title: "Warehouse Relocation",
     hashtags: ["#warehouse", "#relocation", "#moving"],
@@ -29,7 +31,7 @@ const items = [
       "We provide comprehensive warehouse relocation services, ensuring a smooth and stress-free move for your business.",
   },
   {
-    imagePath: "/intercity_relocation.jpeg",
+    imagePath: `${bp}/intercity_relocation.jpeg`,
     imageAlt: "Intercity Relocation",
     title: "Intercity Relocation",
     hashtags: ["#intercity", "#relocation", "#moving"],
@@ -37,7 +39,7 @@ const items = [
       "We provide comprehensive intercity relocation services, ensuring a smooth and stress-free move for your family.",
   },
   {
-    imagePath: "/single_item_movers.jpeg",
+    imagePath: `${bp}/single_item_movers.jpeg`,
     imageAlt: "Single Item Movers",
     title: "Single Item Movers",
     hashtags: ["#single", "#item", "#moving", "#movers"],
@@ -45,7 +47,7 @@ const items = [
       "We provide reliable single item moving services, ensuring your valuable items are transported safely and efficiently.",
   },
   {
-    imagePath: "/furniture_removalists.jpeg",
+    imagePath: `${bp}/furniture_removalists.jpeg`,
     imageAlt: "Furniture Removalists",
     title: "Furniture Removalists",
     hashtags: ["#furniture", "#removalists", "#moving"],
