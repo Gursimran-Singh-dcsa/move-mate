@@ -6,23 +6,38 @@ import StepsAndQuote from "@/shared/components/StepsAndQuote";
 export default function Home() {
   return (
     <div className="font-roboto  ">
-      <div className=" overflow-hidden bg-[url(/nz_land.jpeg)] bg-cover bg-center relative">
-        <div className="  absolute inset-0 w-[100vw] bg-cover bg-[#000] bg-center opacity-70 z-0"></div>
-        {/* Content */}
-        <div className="flex p-4">
-          <div className="relative z-10 p-6 text-white">
-            <h2 className="text-8xl font-bold">Moving made</h2>
-            <h2 className="text-8xl font-bold text-primary  ">Simple.</h2>
-            <h2 className="text-8xl font-bold">Stress-free &</h2>
-            <h2 className="text-8xl font-bold">reliable.</h2>
+      <div className="relative overflow-hidden bg-[url(/nz_land.jpeg)] bg-cover bg-center min-h-[70vh] lg:min-h-screen">
+        <div className="absolute inset-0 bg-black/70 z-0" />
+        <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:px-16 lg:min-h-screen">
+          {/* Heading */}
+          <div className="text-white">
+            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+              Moving made
+            </h2>
+            <h2 className="text-4xl font-bold text-primary sm:text-6xl lg:text-8xl">
+              Simple.
+            </h2>
+            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+              Stress-free &
+            </h2>
+            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+              reliable.
+            </h2>
           </div>
-          <div className="flex z-10  flex-col justify-center items-center flex-grow gap-[10px]">
-            <span className="hover:scale-105 transition-transform cursor-pointer w-[300px] text-center mt-8  gap-[10px] text-[2rem] px-2 bg-primary text-white font-bold py-2 px-4 rounded hover:bg-primary transition-colors duration-300">
-              <span>Get A Quote</span>{" "}
-            </span>
-            <span className="hover:scale-105 transition-transform cursor-pointer border border-[rgba(255,255,255, 0.08)] w-[300px] text-center mt-8  gap-[10px] text-[2rem] px-2 bg-[rgba(255,255,255, 0.08)]  text-white font-bold py-2 px-4 rounded transition-colors duration-300">
-              <span>Explore Services</span>{" "}
-            </span>
+          {/* CTAs */}
+          <div className="flex flex-col gap-4 lg:flex-grow lg:items-center">
+            <a
+              href="/contact"
+              className="hover:scale-105 transition-transform text-center text-xl font-bold px-8 py-3 bg-primary text-white rounded hover:opacity-90 duration-300 w-full sm:w-[300px]"
+            >
+              Get A Quote
+            </a>
+            <a
+              href="#services"
+              className="hover:scale-105 transition-transform text-center text-xl font-bold px-8 py-3 bg-white/10 border border-white/20 text-white rounded hover:bg-white/20 duration-300 w-full sm:w-[300px]"
+            >
+              Explore Services
+            </a>
           </div>
         </div>
       </div>{" "}
