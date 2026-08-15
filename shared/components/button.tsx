@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 
 export const PrimaryButton = ({
@@ -49,7 +49,7 @@ export const SecondaryButton = ({
     return (
       <Link
         href={linkTo ?? "/"}
-        className="bg-white text-primary font-bold py-2 px-4 rounded border border-primary hover:bg-primary hover:text-white transition-colors duration-300"
+        className="bg-gray-100 text-primary font-bold py-2 px-4 rounded border border-primary hover:bg-primary hover:text-white transition-colors duration-300"
       >
         {children}
       </Link>
@@ -58,7 +58,7 @@ export const SecondaryButton = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center bg-white text-primary font-bold py-2 px-4 rounded border border-primary hover:bg-primary hover:text-white transition-colors duration-300 ${noBorder ? "border-none" : ""}`}
+      className={`flex items-center bg-gray-100 text-primary font-bold py-2 px-4 rounded border border-primary hover:bg-primary hover:text-white transition-colors duration-300 ${noBorder ? "border-none" : ""}`}
     >
       {children}
     </button>

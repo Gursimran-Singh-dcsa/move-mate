@@ -14,24 +14,24 @@ const ServiceComponent = ({
   hashtags?: string[];
 }) => {
   return (
-    <div className="mx-auto cursor-pointer  rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-300 xs:min-w-[300px] h-full">
-      <div className="max-w-sm rounded overflow-hidden shadow-lg]  ">
+    <div className="mx-auto cursor-pointer rounded-2xl hover:shadow-lg hover:scale-105 transition-transform duration-300 h-full">
+      <div className="w-full rounded overflow-hidden shadow-lg h-full flex flex-col">
         <Image
           src={imagePath}
           alt={imageAlt}
           width={400}
           height={200}
-          className="w-[100%] h-[100%] rounded-t-lg"
+          className="w-full object-cover rounded-t-lg"
           loading="lazy"
         />
-        <div className="px-6 py-4 bg-white">
+        <div className="px-6 py-4 bg-gray-100 flex-1">
           <div className="font-bold text-xl mb-2 text-primary text-center">
             {title}
           </div>
           <p className="text-gray-700 text-base text-center">{description}</p>
         </div>
         {hashtags.length ? (
-          <div className="px-6 pt-4 pb-2 bg-white">
+          <div className="px-6 pt-4 pb-2 bg-gray-100">
             {hashtags.map((hashtag) => (
               <span
                 key={hashtag}

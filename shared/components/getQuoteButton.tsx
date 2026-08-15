@@ -5,7 +5,7 @@ export const GetQuoteButton = () => {
     <PrimaryButton isLink linkTo="/contact">
       <span className="flex items-center gap-2">
         Get A Quote{" "}
-        <span className="p-[0.5px] rounded-full bg-white">
+        <span className="p-[0.5px] rounded-full bg-gray-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -15,9 +15,9 @@ const Steps = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-form-icon lucide-form h-full w-[45px]"
           >
             <path d="M4 14h6" />
@@ -38,9 +38,9 @@ const Steps = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-calendar-days-icon lucide-calendar-days h-full w-[45px]"
           >
             <path d="M8 2v3" />
@@ -65,16 +65,16 @@ const Steps = () => {
               viewBox="0 0 24 24"
               fill="red"
               stroke="red"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-heart-icon lucide-heart"
             >
               <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
             </svg>
           </span>
         ),
-        description: "Select a date and time that works best for you. ", 
+        description: "Select a date and time that works best for you. ",
       },
       {
         icon: (
@@ -85,9 +85,9 @@ const Steps = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-package-icon lucide-package h-full w-[45px]"
           >
             <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
@@ -109,9 +109,9 @@ const Steps = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-truck-icon lucide-truck h-full w-[45px]"
           >
             <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
@@ -134,9 +134,9 @@ const Steps = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-heart-handshake-icon lucide-heart-handshake h-full w-[45px]"
           >
             <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" />
@@ -167,12 +167,45 @@ const Steps = () => {
 
 const Quote = () => {
   return (
-    <div className="flex flex-col gap-6 w-full p-6 bg-white text-gray-800 rounded-lg h-full border border-primary shadow-md col-span-2">
-      <h3 className="text-lg font-semibold">Get a Quote</h3>
-      <p>
+    <div className="flex flex-col gap-3 w-full p-6 bg-gray-200 text-black rounded-2xl h-full border border-primary shadow-md col-span-2">
+      <h3 className="text-xl font-extrabold text-center">
+        Tell us your Requirements
+      </h3>
+      <p className="text-center">
         Fill out the form and our team will provide you with a personalized
-        quote.
+        quote for your requirements.
       </p>
+      <form
+        className="flex flex-col gap-4"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <input
+          type="text"
+          placeholder="Your Full Name"
+          className="p-2 border border-gray-300 rounded"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="p-2 border border-gray-300 rounded"
+        />
+        <input
+          type="tel"
+          placeholder="Your Phone Number"
+          className="p-2 border border-gray-300 rounded"
+        />
+        <textarea
+          placeholder="Your Requirements"
+          className="p-2 border border-gray-300 rounded"
+        />
+        <span>By submitting this form, you agree to our <a href="/terms" className="underline">privacy policy</a>.</span>
+        <button
+          type="submit"
+          className="p-2 bg-primary text-white rounded cursor-pointer hover:scale-101 transition-colors duration-300 shadow-lg"
+        >
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
