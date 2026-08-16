@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo } from "react";
 
 const Steps = () => {
@@ -124,27 +125,27 @@ const Steps = () => {
         description:
           "Our professional team will transport your packages safely to your new home.",
       },
-    //   {
-    //     icon: (
-    //       <svg
-    //         xmlns="http://www.w3.org/2000/svg"
-    //         width="24"
-    //         height="24"
-    //         viewBox="0 0 24 24"
-    //         fill="none"
-    //         stroke="currentColor"
-    //         strokeWidth="2"
-    //         strokeLinecap="round"
-    //         strokeLinejoin="round"
-    //         className="lucide lucide-heart-handshake-icon lucide-heart-handshake h-full w-[45px]"
-    //       >
-    //         <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" />
-    //       </svg>
-    //     ),
-    //     title: "We Install Your Belongings",
-    //     description:
-    //       "Our team will help you set up and install your belongings in your new home.",
-    //   },
+      //   {
+      //     icon: (
+      //       <svg
+      //         xmlns="http://www.w3.org/2000/svg"
+      //         width="24"
+      //         height="24"
+      //         viewBox="0 0 24 24"
+      //         fill="none"
+      //         stroke="currentColor"
+      //         strokeWidth="2"
+      //         strokeLinecap="round"
+      //         strokeLinejoin="round"
+      //         className="lucide lucide-heart-handshake-icon lucide-heart-handshake h-full w-[45px]"
+      //       >
+      //         <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" />
+      //       </svg>
+      //     ),
+      //     title: "We Install Your Belongings",
+      //     description:
+      //       "Our team will help you set up and install your belongings in your new home.",
+      //   },
     ],
     [],
   );
@@ -197,7 +198,31 @@ const Quote = () => {
           placeholder="Your Requirements"
           className="p-2 border border-gray-300 rounded"
         />
-        <span>By submitting this form, you agree to our <a href="/terms" className="underline">privacy policy</a>.</span>
+        <label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
+          <input
+            type="checkbox"
+            required
+            className="mt-1 h-4 w-4 shrink-0 accent-primary"
+          />
+
+          <span>
+            By submitting this form, you agree to our{" "}
+            <Link
+              href="/privacy-policy"
+              className="font-semibold text-primary hover:underline"
+            >
+              Privacy Policy
+            </Link>{" "}
+            and
+            <Link
+              href="/terms-and-conditions"
+              className="font-semibold text-primary hover:underline"
+            >
+              Terms and Conditions
+            </Link>
+            .
+          </span>
+        </label>
         <button
           type="submit"
           className="p-2 bg-primary text-white rounded cursor-pointer hover:scale-101 transition-colors duration-300 shadow-lg"

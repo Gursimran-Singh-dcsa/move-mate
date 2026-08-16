@@ -301,6 +301,13 @@ export default function GetAQuotePage() {
                       className="font-semibold text-primary hover:underline"
                     >
                       Privacy Policy
+                    </Link>{" "}
+                    and
+                    <Link
+                      href="/terms-and-conditions"
+                      className="font-semibold text-primary hover:underline"
+                    >
+                      Terms and Conditions
                     </Link>
                     .
                   </span>
