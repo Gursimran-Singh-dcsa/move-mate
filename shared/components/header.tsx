@@ -174,7 +174,7 @@ export default function Header() {
         {/* Right side */}
         <div className="hidden items-center gap-6 lg:flex">
           {/* Phone */}
-          <a href="tel:+19876543210" className="flex items-center gap-3">
+          <a href="tel:+64800119001" className="flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-50 text-light-blue">
               {/* <Phone className="h-5 w-5" /> */}
               <svg
@@ -196,7 +196,7 @@ export default function Header() {
 
             <div className="leading-tight">
               <p className="text-[16px] font-bold text-light-blue">
-                +1-9876543210
+                +64-800 119 001
               </p>
               <p className="mt-1 text-xs text-slate-500">Call Us Anytime</p>
             </div>
@@ -294,7 +294,7 @@ export default function Header() {
               </span>
               <div>
                 <p className="text-sm font-bold text-light-blue">
-                  +1-9876543210
+                  +64-800 119 001
                 </p>
                 <p className="text-xs text-slate-500">Call Us Anytime</p>
               </div>

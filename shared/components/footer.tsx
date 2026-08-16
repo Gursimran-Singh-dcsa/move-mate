@@ -116,7 +116,7 @@ const Footer = () => {
 
                 {/* Phone */}
                 <a
-                  href="tel:+64123456789"
+                  href="tel:+64800119001"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Call us at +64 123 456 789"
@@ -137,7 +137,7 @@ const Footer = () => {
                     <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                   </svg>
 
-                  <span>+64 123 456 789</span>
+                  <span>+64 800 119 001</span>
                 </a>
 
                 {/* Address */}
