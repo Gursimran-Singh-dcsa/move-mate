@@ -14,7 +14,12 @@ const AboveHeader = () => {
       <div className="mx-auto flex h-16  items-center justify-between px-6 text-sm ">
         {/* Left */}
         <div className="flex items-center justify-between gap-6">
-          <span className="hidden lg:flex items-center gap-2">
+          <a
+            href="https://www.google.com/maps/place/10+Pa+Ariki+Road,+Te+Kauwhata+3710,+New+Zealand"
+            target="_blank"
+            className="hidden lg:flex items-center gap-2 hover:text-blue-300 transition-colors"
+            rel="noopener noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -30,8 +35,8 @@ const AboveHeader = () => {
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
               <circle cx="12" cy="10" r="3" />
             </svg>{" "}
-            Auckland, New Zealand
-          </span>
+            10 Pa Ariki Road,Te Kauwhata 3710
+          </a>
           <span className="hidden lg:block border-l border-slate-500 h-5" />
           <span className="hidden items-center gap-2 md:flex">
             <svg
@@ -150,22 +155,22 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/about"
-            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/about") ? "text-primary border-b-[3px]" : ""}`}
+            href="/about-us/"
+            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/about-us/") ? "text-primary border-b-[3px]" : ""}`}
           >
             About Us
           </Link>
 
           <Link
             href="/services"
-            className={`py-7 text-[15px] font-semibold transition-colors hover:text-light-blue ${isActive("/services") ? "text-primary border-b-[3px]" : ""}`}
+            className={`py-7 text-[15px] font-semibold transition-colors hover:text-light-blue ${isActive("/services/") ? "text-primary border-b-[3px]" : ""}`}
           >
             Services
           </Link>
 
           <Link
             href="/contact"
-            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/contact") ? "text-primary border-b-[3px]" : ""}`}
+            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/contact/") ? "text-primary border-b-[3px]" : ""}`}
           >
             Contact Us
           </Link>

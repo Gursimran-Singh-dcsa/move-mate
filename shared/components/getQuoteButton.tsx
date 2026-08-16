@@ -2,7 +2,7 @@ import { PrimaryButton } from "./button";
 
 export const GetQuoteButton = () => {
   return (
-    <PrimaryButton isLink linkTo="/contact">
+    <PrimaryButton isLink linkTo={`/get-a-quote`}>
       <span className="flex items-center gap-2">
         Get A Quote{" "}
         <span className="p-[0.5px] rounded-full bg-gray-100">

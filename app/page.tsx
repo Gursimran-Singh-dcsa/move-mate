@@ -32,13 +32,13 @@ export default function Home() {
           {/* CTAs */}
           <div className="flex flex-col gap-4 lg:flex-grow lg:items-center">
             <a
-              href="/contact"
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/get-a-quote`}
               className="hover:scale-105 transition-transform text-center text-xl font-bold px-8 py-3 bg-primary text-white rounded hover:opacity-90 duration-300 w-full sm:w-[300px]"
             >
               Get A Quote
             </a>
             <a
-              href="#services"
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/services`}
               className="hover:scale-105 transition-transform text-center text-xl font-bold px-8 py-3 bg-white/10 border border-white/20 text-white rounded hover:bg-white/20 duration-300 w-full sm:w-[300px]"
             >
               Explore Services

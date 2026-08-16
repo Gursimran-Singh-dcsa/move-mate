@@ -5,7 +5,7 @@ import ServicesComponent from "./serviceComponent";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-const items = [
+export const items = [
   {
     imagePath: `${bp}/house_relocation.jpeg`,
     imageAlt: "House Relocation",

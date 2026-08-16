@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col xs:flex-row sm:flex-row gap-3">
             <Link
-              href="/get-a-quote"
+              href={`/get-a-quote`}
               className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:opacity-90 hover:shadow-md"
             >
               Get a Quote
@@ -119,7 +119,7 @@ const Footer = () => {
                   href="tel:+64800119001"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Call us at +64 123 456 789"
+                  aria-label="Call us at +64 800119001"
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   <svg
