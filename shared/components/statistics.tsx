@@ -40,14 +40,14 @@ export const Statistics = () => {
           <span>Years of Experience</span>
         </div>
 
-        {/* <div className="w-[2px] bg-primary hidden lg:block" /> */}
+        <div className="w-[2px] bg-primary hidden lg:block" />
 
-        {/* <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center">
           <span className="text-4xl font-bold text-primary">
-            <CountUp end={25} />
+            <CountUp end={16} />
           </span>
           <span>Cities Covered</span>
-        </div> */}
+        </div>
 
         {/* <div className="w-[2px] bg-primary hidden lg:block" /> */}
 

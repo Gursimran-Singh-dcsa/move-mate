@@ -88,6 +88,9 @@ const Footer = () => {
                 {/* Email */}
                 <a
                   href="mailto:contact@movematerelocations.co.nz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email"
                   className="flex items-start gap-3 hover:text-primary transition-colors"
                 >
                   <svg
@@ -114,6 +117,9 @@ const Footer = () => {
                 {/* Phone */}
                 <a
                   href="tel:+64123456789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Call us at +64 123 456 789"
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   <svg
@@ -135,7 +141,13 @@ const Footer = () => {
                 </a>
 
                 {/* Address */}
-                <div className="flex items-start gap-3">
+                <a
+                  className="flex items-start gap-3 cursor-pointer hover:text-primary transition-colors"
+                  href="https://www.google.com/maps/place/10+Pa+Ariki+Road,+Te+Kauwhata+3710,+New+Zealand/@-37.4158242,175.1507177,17z/data=!3m1!4b1!4m6!3m5!1s0x6d6d4456a1b379fd:0x4ea83c543c9a2659!8m2!3d-37.4158242!4d175.1532926!16s%2Fg%2F11sv2vtq_t?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="10 Pa Ariki Road, Te Kauwhata 3710"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -152,8 +164,8 @@ const Footer = () => {
                     <circle cx="12" cy="10" r="3" />
                   </svg>
 
-                  <span>123 Main Street, Auckland, New Zealand</span>
-                </div>
+                  <span>10 Pa Ariki Road,Te Kauwhata 3710</span>
+                </a>
 
                 {/* Timing */}
                 <div className="flex items-center gap-3">
