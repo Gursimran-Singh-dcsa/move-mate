@@ -2,8 +2,29 @@
 
 import { useRef, useState } from "react";
 import ServicesComponent from "./serviceComponent";
+import { Metadata } from "next";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export const metadata: Metadata = {
+  title: "Moving & Relocation Services",
+  description:
+    "Explore professional house, office, warehouse, intercity, single item and furniture relocation services from Move Mate Relocations NZ.",
+
+  openGraph: {
+    title: "Moving & Relocation Services | Move Mate NZ",
+    description:
+      "Professional moving solutions for homes, offices, warehouses, intercity moves, single items and furniture across New Zealand.",
+    images: [
+      {
+        url: `${bp}/full_logo.jpeg`,
+        width: 1200,
+        height: 630,
+        alt: "Move Mate Relocations NZ Services",
+      },
+    ],
+  },
+};
 
 export const items = [
   {

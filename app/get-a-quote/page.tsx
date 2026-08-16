@@ -1,4 +1,25 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get a Quote",
+  description:
+    "Request a personalised moving and relocation quote from Move Mate Relocations NZ. Tell us about your move and our team will get back to you.",
+
+  openGraph: {
+    title: "Get a Moving Quote | Move Mate Relocations NZ",
+    description:
+      "Get a personalised quote for your house, office, warehouse, intercity or furniture move across New Zealand.",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/full_logo.jpeg`,
+        width: 1200,
+        height: 630,
+        alt: "Get a Quote from Move Mate Relocations NZ",
+      },
+    ],
+  },
+};
 
 export default function GetAQuotePage() {
   return (

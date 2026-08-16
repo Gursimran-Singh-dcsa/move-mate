@@ -261,9 +261,9 @@ export default function Header() {
             {(
               [
                 { href: "/", label: "Home" },
-                { href: "/about", label: "About Us" },
-                { href: "/services", label: "Services" },
-                { href: "/contact", label: "Contact Us" },
+                { href: "/about-us/", label: "About Us" },
+                { href: "/services/", label: "Services" },
+                { href: "/contact/", label: "Contact Us" },
               ] as const
             ).map(({ href, label }) => (
               <Link

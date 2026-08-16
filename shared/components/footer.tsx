@@ -246,7 +246,13 @@ const Footer = () => {
                   </Link>
 
                   <span className="mx-2">|</span>
-
+                  <Link
+                    href="/terms-and-conditions"
+                    className="text-primary hover:underline"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  <span className="mx-2">|</span>
                   <span>NZBN-9429053867063</span>
                 </div>
               </div>

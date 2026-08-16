@@ -1,15 +1,29 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { GetACallback } from "@/shared/components/getACallback";
 import Image from "next/image";
+import { Metadata } from "next";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Move Mate Relocations NZ for professional moving and relocation services. Call, email or request a callback from our team.",
 
+  openGraph: {
+    title: "Contact Move Mate Relocations NZ",
+    description:
+      "Contact our team for reliable house, office, warehouse and relocation services across New Zealand.",
+    images: [
+      {
+        url: `${bp}/full_logo.jpeg`,
+        width: 1200,
+        height: 630,
+        alt: "Contact Move Mate Relocations NZ",
+      },
+    ],
+  },
+};
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <main className="bg-slate-50 text-midnight-blue">
       {/* Hero */}
@@ -194,12 +208,18 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <div>
-                    <a href='/privacy-policy' className="text-sm text-gray-500 hover:text-primary transition-colors">
+                    <a
+                      href="/privacy-policy"
+                      className="text-sm text-gray-500 hover:text-primary transition-colors"
+                    >
                       Privacy Policy
                     </a>
                   </div>
                   <div>
-                    <a href='/terms-and-conditions' className="text-sm text-gray-500 hover:text-primary transition-colors">
+                    <a
+                      href="/terms-and-conditions"
+                      className="text-sm text-gray-500 hover:text-primary transition-colors"
+                    >
                       Terms and Conditions
                     </a>
                   </div>

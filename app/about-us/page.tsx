@@ -1,8 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn more about Move Mate Relocations NZ and our commitment to providing reliable, professional and stress-free moving services across New Zealand.",
+
+  openGraph: {
+    title: "About Move Mate Relocations NZ",
+    description:
+      "Discover Move Mate Relocations NZ and our approach to professional, reliable and stress-free moving services.",
+    images: [
+      {
+        url: `${bp}/full_logo.jpeg`,
+        width: 1200,
+        height: 630,
+        alt: "Move Mate Relocations NZ",
+      },
+    ],
+  },
+};
 export default function AboutPage() {
   return (
     <main className="bg-slate-50 text-midnight-blue">
