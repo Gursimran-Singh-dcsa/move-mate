@@ -63,27 +63,30 @@ const AboveHeader = () => {
           <span className="hidden items-center gap-2 sm:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-clock5-icon lucide-clock-5"
+              aria-hidden="true"
             >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l2 4" />
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+              <path d="M14 2v6h6" />
+              <path d="M8 13h8" />
+              <path d="M8 17h5" />
+              <path d="M8 9h2" />
             </svg>{" "}
-            Mon - Sat: 8:00 AM - 6:00 PM
+            NZBN-9429053867063
           </span>
           <span className="border-l border-slate-500 h-5" />
 
           <span className="hidden font-medium lg:block">Follow Us:</span>
 
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=61593218276561"
             aria-label="Facebook"
             className="transition-colors hover:text-blue-300"
           >
@@ -96,7 +99,7 @@ const AboveHeader = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.instagram.com/movematerelocationsnz"
             aria-label="Instagram"
             className="transition-colors hover:text-blue-300"
           >

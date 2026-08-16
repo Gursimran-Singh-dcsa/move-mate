@@ -173,13 +173,13 @@ const Footer = () => {
                     <path d="M12 6v6l2 4" />
                   </svg>
 
-                  <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                  <span>Everyday 8:00 AM - 8:00 PM</span>
                 </div>
 
                 {/* Social */}
                 <div className="flex flex-wrap items-center gap-4 pt-1">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61593218276561"
                     aria-label="Facebook"
                     className="transition-opacity hover:opacity-70"
                   >
@@ -192,7 +192,7 @@ const Footer = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.instagram.com/movematerelocationsnz"
                     aria-label="Instagram"
                     className="transition-opacity hover:opacity-70"
                   >
@@ -235,7 +235,7 @@ const Footer = () => {
 
                   <span className="mx-2">|</span>
 
-                  <span>TRADE123456789</span>
+                  <span>NZBN-9429053867063</span>
                 </div>
               </div>
             </div>

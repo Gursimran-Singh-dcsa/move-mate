@@ -42,6 +42,8 @@ export const GetACallback = () => {
               className="appearance-none border h-[3rem] border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-10"
             >
               <option value="">Select time</option>
+              <option value="8:00-9:00">8:00 AM - 9:00 AM</option>
+              <option value="9:00-10:00">9:00 AM - 10:00 AM</option>
               <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
               <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
               <option value="12:00-13:00">12:00 PM - 1:00 PM</option>
@@ -50,6 +52,8 @@ export const GetACallback = () => {
               <option value="15:00-16:00">3:00 PM - 4:00 PM</option>
               <option value="16:00-17:00">4:00 PM - 5:00 PM</option>
               <option value="17:00-18:00">5:00 PM - 6:00 PM</option>
+              <option value="18:00-19:00">6:00 PM - 7:00 PM</option>
+              <option value="19:00-20:00">7:00 PM - 8:00 PM</option>
             </select>
             <svg
               className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400"
