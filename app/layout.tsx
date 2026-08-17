@@ -5,7 +5,7 @@ import Header from "@/shared/components/header";
 import Footer from "@/shared/components/footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://http://movematerelocations.co.nz/"),
+  metadataBase: new URL("https://movematerelocations.co.nz/"),
 
   title: {
     default: "Move Mate Relocations NZ | Professional Moving Services",

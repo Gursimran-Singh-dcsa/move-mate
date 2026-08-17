@@ -69,7 +69,7 @@ export default function ContactPage() {
                 <div className="mt-7 space-y-5">
                   {/* Email */}
                   <a
-                    href="mailto:contact@movematerelocations.co.nz"
+                    href="mailto:info@movematerelocations.co.nz"
                     className="group flex items-start gap-4"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
@@ -95,7 +95,7 @@ export default function ContactPage() {
                       </p>
 
                       <p className="mt-1 break-all text-sm font-bold text-midnight-blue group-hover:text-primary sm:text-base">
-                        contact@movematerelocations.co.nz
+                        info@movematerelocations.co.nz
                       </p>
                     </div>
                   </a>

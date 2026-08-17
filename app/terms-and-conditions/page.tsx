@@ -59,9 +59,7 @@ const Clause = ({
   children: React.ReactNode;
 }) => (
   <div className="flex gap-3">
-    <span className="shrink-0 font-semibold text-midnight-blue">
-      {number}
-    </span>
+    <span className="shrink-0 font-semibold text-midnight-blue">{number}</span>
 
     <p className="min-w-0">{children}</p>
   </div>
@@ -83,8 +81,8 @@ export default function TermsAndConditionsPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Please read these terms and conditions carefully before booking
-              or accepting moving, relocation or freight services.
+              Please read these terms and conditions carefully before booking or
+              accepting moving, relocation or freight services.
             </p>
           </div>
         </div>
@@ -98,56 +96,51 @@ export default function TermsAndConditionsPage() {
               {/* Introduction */}
               <Section number="1.0" title="Contract">
                 <Clause number="1.0.">
-                  This contract is made between Furniture and Freight
-                  Distribution Group (“the Movers”) and __________ (“the
-                  Customer”). All business is undertaken by the movers,
-                  including the provision if any, advice, information or other
-                  services is undertaken upon and subject to these conditions.
+                  This contract is made between Move Mate Relocations NZ (“the
+                  Movers”) and ————————— (“the Customer”). All business is
+                  undertaken by the movers, including the provision if any,
+                  advice, information or other services is undertaken upon and
+                  subject to these conditions.
                 </Clause>
               </Section>
 
               {/* Acceptance */}
-              <Section
-                // number="2.0"
-                title="Acceptance of Goods for Carriage"
-              >
+              <Section number="2.0" title="Acceptance of Goods for Carriage">
                 <Clause number="2.0.">
-                  Furniture and Freight Distribution Group accepts goods for
-                  carriage only upon these terms and conditions:
+                  Move Mate Relocations NZ accepts goods for carriage only upon
+                  these terms and conditions:
                 </Clause>
 
                 <Clause number="2.1">
                   For any house/office moves and furniture relocation and
                   general freight movement, where prices are quoted based on
-                  information provided by the customer, Furniture and Freight
-                  Distribution Group reserves the right to modify prices as a
-                  result of incorrect volume, dimension and/or weight or access
-                  conditions e.g. stairs or balcony varying to those quoted by
-                  the customer at the time of booking. The Customer should
-                  notify Furniture and Freight Distribution Group if there is
-                  not suitable and convenient access to the place from which
-                  the goods are to be removed. The movers can make an extra
-                  charge due to any access restrictions and will not be liable
-                  for any goods damaged through the lack of such access.
-                  Undeclared redirection, multi route, or additional manpower
-                  not requested, storage, etc. will incur extra charges.
+                  information provided by the customer, Move Mate Relocations NZ
+                  reserves the right to modify prices as a result of incorrect
+                  volume, dimension and/or weight or access conditions e.g.
+                  stairs or balcony varying to those quoted by the customer at
+                  the time of booking. The Customer should notify Move Mate
+                  Relocations NZ if there is not suitable and convenient access
+                  to the place from which the goods are to be removed. The
+                  movers can make an extra charge due to any access restrictions
+                  and will not be liable for any goods damaged through the lack
+                  of such access. Undeclared redirection, multi route, or
+                  additional manpower not requested, storage, etc. will incur
+                  extra charges.
                 </Clause>
 
                 <Clause number="2.2">
                   There will be an extra charge of $120.00 each for any extra
                   heavy, oversized item such as double door fridge, vault/safe,
                   spa pool, pool table, commercial items, etc. It’s the
-                  customer’s responsibility to inform Furniture and Freight
-                  Distribution Group prior if the move includes any item of
-                  such or similar nature.
+                  customer’s responsibility to inform Move Mate Relocations NZ
+                  prior if the move includes any item of such or similar nature.
                 </Clause>
 
                 <Clause number="2.3">
-                  If Furniture and Freight Distribution Group notices that
-                  goods are not safe to transport or insufficiently packaged
-                  and may cause potential damage to either the item being
-                  moved or other items, including the vehicle, the company
-                  reserves the right to reject acceptance of the item/s.
+                  If Move Mate Relocations NZ notices that goods are not safe to
+                  transport or insufficiently packaged and may cause potential
+                  damage to either the item being moved or other items, the
+                  company reserves the right to reject acceptance of the item/s.
                 </Clause>
 
                 <Clause number="2.4">
@@ -159,8 +152,8 @@ export default function TermsAndConditionsPage() {
                   <li>
                     Any article or substance which is, or is likely to be, of a
                     dangerous, corrosive, inflammable, explosive or damaging
-                    nature, or anything likely to encourage vermin, bora, or
-                    any other pest.
+                    nature, or anything likely to encourage vermin, bora, or any
+                    other pest.
                   </li>
 
                   <li>
@@ -171,13 +164,13 @@ export default function TermsAndConditionsPage() {
                   <li>
                     Jewelry, watches, trinkets, precious stones or metals,
                     money, deeds, securities, stamps, coins or goods or
-                    collections of a similar kind.
+                    collections of a similar kind
                   </li>
 
                   <li>
                     The customers will empty, properly defrost, and clean
-                    refrigerators and deep freezers. We are not responsible
-                    for the contents.
+                    refrigerators and deep freezers. We are not responsible for
+                    the contents
                   </li>
 
                   <li>
@@ -187,20 +180,20 @@ export default function TermsAndConditionsPage() {
                 </ul>
 
                 <Clause number="2.5">
-                  The company withholds the right to delay the customer’s job
-                  by 2 hours due to any unforeseen circumstances without
-                  waiving any charges. Should the service be delayed more than
-                  two hours the customer will be informed and will then come to
-                  a mutual decision at the company’s discretion.
+                  The company withholds the right to delay the customer’s job by
+                  2 hours due to any unforeseen circumstances without waiving
+                  any charges. Should the service be delayed more than two hours
+                  the customer will be informed and will then come to a mutual
+                  decision at the company’s discretion.
                 </Clause>
 
                 <Clause number="2.6">
                   Our designated arrival time is to be considered as a guide
                   only. Various factors can affect our arrival time such as
-                  unexpected delays on previous job(s), delays caused by
-                  traffic congestion and/or accidents, roadworks and/or
-                  closures, streets not on maps and/or incorrect directions
-                  supplied by customers, weather, truck breakdown, etc.
+                  unexpected delays on previous job(s), delays caused by traffic
+                  congestion and/or accidents, roadworks and/or closures,
+                  streets not on maps and/or incorrect directions supplied by
+                  customers, weather, truck breakdown, etc.
                 </Clause>
 
                 <Clause number="2.7">
@@ -212,28 +205,25 @@ export default function TermsAndConditionsPage() {
               </Section>
 
               {/* Loss / Damage */}
-              <Section
-                number="3.0"
-                title="Loss, Damage and Other Liabilities"
-              >
+              <Section number="3.0" title="Loss, Damage and Other Liabilities">
                 <Clause number="3.1">
                   Whilst our team of movers provides highest care and attention
-                  when carrying out your move, there remains the risk of
-                  damage. Whilst the risk is low, all work done will be carried
-                  out at “Owners Risk”.
+                  when carrying out your move, there remains the risk of damage.
+                  Whilst the risk is low, all work done will be carried out at
+                  “Owners Risk”.
                 </Clause>
 
                 <Clause number="3.2">
                   Any damage to premises (lawns, floors, driveways, footpaths,
                   underground pipes, cables, sewerage, and other underground
-                  installations), is not covered. Should our staff be
-                  instructed by the property occupier, or any person acting on
-                  their behalf to drive, park or maneuver vehicles in or near
-                  an area where such damage is likely to occur, compliance with
-                  such instructions will not in any way involve the Movers or
-                  its insurers in responsibility for any subsequent damage
-                  which may be sustained. Such responsibility will rest solely
-                  in the hands of the Owner.
+                  installations), is not covered. Should our staff be instructed
+                  by the property occupier, or any person acting on their behalf
+                  to drive, park or maneuver vehicles in or near an area where
+                  such damage is likely to occur, compliance with such
+                  instructions will not in any way involve the Movers or its
+                  insurers in responsibility for any subsequent damage which may
+                  be sustained. Such responsibility will rest solely in the
+                  hands of the Owner.
                 </Clause>
               </Section>
 
@@ -243,14 +233,14 @@ export default function TermsAndConditionsPage() {
                   Whilst our team provides highest care and attention to your
                   goods when carrying out your move, there remains the risk of
                   damage, especially when handling fragile items, large
-                  furniture, white ware items and/or kitchen appliances
-                  without its original packaging/unpacked. Arranging a transit
-                  insurance cover will give you peace of mind, should the
-                  unforeseen happen, you’ll be able to repair/replace your
-                  valuables. If you have an existing insurance provider, you
-                  can arrange a transit insurance with them, otherwise,
-                  Furniture and Freight Distribution Group can assist you with
-                  it.
+                  furniture, white ware items and/or kitchen appliances without
+                  its original packaging/unpacked. Arranging a transit insurance
+                  cover will give you peace of mind, should the unforeseen
+                  happen, you’ll be able to repair/replace your valuables.
+                  <br />
+                  If you have an existing insurance provider, you can arrange a
+                  transit insurance with them, otherwise, Move Mate Relocations
+                  NZ can assist you with it.
                 </Clause>
 
                 <Clause number="4.2">
@@ -277,14 +267,14 @@ export default function TermsAndConditionsPage() {
                   There will be no liability for third party damage – i.e. in
                   the event of an accident where the other party is found at
                   fault, the carrier will not be liable for goods damaged in
-                  transit. In this case the customer must claim directly off
-                  the insurance company of the other party.
+                  transit. In this case the customer must claim directly off the
+                  insurance company of the other party.
                 </Clause>
 
                 <Clause number="4.6">
-                  In accordance with the Contract and Commercial Act, your
-                  claim will only be processed once complete payment of move
-                  has been received and acknowledged.
+                  In accordance with the Contract and Commercial Act, your claim
+                  will only be processed once complete payment of move has been
+                  received and acknowledged.
                 </Clause>
               </Section>
 
@@ -293,19 +283,19 @@ export default function TermsAndConditionsPage() {
                 <Clause number="5.1">
                   All residential and non-credit account moves are strictly
                   cash, bank transfer or credit/debit card payments unless
-                  pre-arranged with management. With commercial office moves,
-                  we allow a maximum 7 days account.
+                  pre-arranged with management. With commercial office moves, we
+                  allow a maximum 7 days account.
                 </Clause>
 
                 <Clause number="5.2">
-                  All Credit Card payments (Visa and MasterCard) will be
-                  charged a 1.5% fee to cover Mobile EFTPOS terminal fees and
+                  All Credit Card payments (Visa and MasterCard) will be charged
+                  a 1.5% fee to cover Mobile EFTPOS terminal fees and
                   transaction fees.
                 </Clause>
 
                 <Clause number="5.3">
-                  Furniture and Freight Distribution Group reserves the right
-                  to ask for the payment before unloading the goods.
+                  Move Mate Relocations NZ reserves the right to ask for the
+                  payment before unloading the goods.
                 </Clause>
 
                 <Clause number="5.4">
@@ -314,32 +304,35 @@ export default function TermsAndConditionsPage() {
                 </Clause>
 
                 <Clause number="5.5">
-                  All defaulting accounts will be forwarded to third party
-                  debt collectors at the defaulter’s expense.
+                  All defaulting accounts will be forwarded to third party debt
+                  collectors at the defaulter’s expense.
                 </Clause>
 
                 <Clause number="5.6">
                   We require you to pay in advance a 15% deposit to confirm the
-                  moving slot for any intercity move. Proof of payment should
-                  be sent to us through email. The deposit will be refunded if
-                  the cancellation is made 72 hours prior to the moving date.
+                  moving slot for any intercity move. Proof of payment should be
+                  sent to us through email. The deposit will be refunded if the
+                  cancellation is made 72 hours prior to the moving date.
                 </Clause>
               </Section>
 
               {/* Misconduct */}
-              <Section number="6.0" title="Misconduct and Unacceptable Behaviour">
+              <Section
+                number="6.0"
+                title="Misconduct and Unacceptable Behaviour"
+              >
                 <Clause number="6.0">
-                  Misconduct and unacceptable behaviour with any staff
-                  member(s) may result in customer’s booking being terminated
-                  at the company’s discretion.
+                  Misconduct and unacceptable behaviour with any staff member(s)
+                  may result in customer’s booking being terminated at the
+                  company’s discretion.
                 </Clause>
               </Section>
 
               {/* Cancellation */}
               <Section number="7.0" title="Cancellation">
                 <Clause number="7.0">
-                  $100.00 cancellation fee applies unless 48 hours notice is
-                  given via email.
+                  Cancellation: $100.00 cancellation fee applies unless 48 hours
+                  notice is given via email.
                 </Clause>
 
                 <div className="mt-6 rounded-xl border border-primary/10 bg-primary/5 p-5">
@@ -348,9 +341,8 @@ export default function TermsAndConditionsPage() {
                     booking through a third party, you agree to the terms and
                     conditions of Furniture and Freight Distribution Group.
                     These terms and conditions will be considered as a legal
-                    contract between you and Furniture and Freight Distribution
-                    Group. Our terms and conditions are subject to change
-                    without prior notice.
+                    contract between you and Move Mate Relocations NZ Our terms
+                    and conditions are subject to change without prior notice.
                   </p>
                 </div>
               </Section>

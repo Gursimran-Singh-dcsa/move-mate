@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 const Steps = () => {
   const steps = useMemo(
@@ -166,6 +166,126 @@ const Steps = () => {
 };
 
 const Quote = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [result, setResult] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+
+  const validatePhone = (phone: string) => {
+    const cleanedPhone = phone.replace(/[\s()-]/g, "");
+
+    // NZ phone:
+    // 0212345678
+    // +64212345678
+    return /^(?:02\d{7,9}|\+642\d{7,9})$/.test(cleanedPhone);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setResult(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const phone = formData.get("phone")?.toString().trim() || "";
+    const requirements = formData.get("requirements")?.toString().trim() || "";
+
+    // Name validation
+    if (name.length < 2) {
+      setResult({
+        type: "error",
+        message: "Please enter your full name.",
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setResult({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    // Phone validation
+    if (!validatePhone(phone)) {
+      setResult({
+        type: "error",
+        message:
+          "Please enter a valid New Zealand phone number, e.g. +64212345678.",
+      });
+      return;
+    }
+
+    // Requirements validation
+    if (requirements.length < 10) {
+      setResult({
+        type: "error",
+        message: "Please provide a few details about your moving requirements.",
+      });
+      return;
+    }
+
+    // Privacy checkbox
+    const consent = formData.get("consent");
+
+    if (consent !== "yes") {
+      setResult({
+        type: "error",
+        message: "Please agree to our Privacy Policy and Terms and Conditions.",
+      });
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+
+      formData.set("access_key", "4ad95caa-134f-4696-a97a-9d1cd7769692");
+
+      formData.set("subject", "New Quote Request - Move Mate Relocations NZ");
+
+      formData.set("from_name", "Move Mate Relocations NZ");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult({
+          type: "success",
+          message:
+            "Thank you! Your request has been submitted successfully. Our team will get in touch with you shortly.",
+        });
+
+        form.reset();
+      } else {
+        setResult({
+          type: "error",
+          message: "Sorry, we couldn't submit your request. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Quote form error:", error);
+
+      setResult({
+        type: "error",
+        message:
+          "Something went wrong while submitting the form. Please try again or contact us directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="flex flex-col gap-3 w-full p-6 bg-gray-200 text-black rounded-2xl h-full border border-primary shadow-md col-span-2">
       <h3 className="text-xl font-extrabold text-center">
@@ -175,31 +295,59 @@ const Quote = () => {
         Fill out the form and our team will provide you with a personalized
         quote for your requirements.
       </p>
-      <form
-        className="flex flex-col gap-4"
-        onSubmit={(e) => e.preventDefault()}
-      >
+      <form className="flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
+        {/* Name */}
         <input
+          name="name"
           type="text"
           placeholder="Your Full Name"
-          className="p-2 border border-gray-300 rounded"
+          required
+          minLength={2}
+          maxLength={100}
+          autoComplete="name"
+          className="rounded border border-gray-300 p-2 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
+
+        {/* Email */}
         <input
+          name="email"
           type="email"
           placeholder="Your Email"
-          className="p-2 border border-gray-300 rounded"
+          required
+          maxLength={150}
+          autoComplete="email"
+          className="rounded border border-gray-300 p-2 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
+
+        {/* Phone */}
         <input
+          name="phone"
           type="tel"
-          placeholder="Your Phone Number"
-          className="p-2 border border-gray-300 rounded"
+          placeholder="+64 21 234 5678"
+          required
+          inputMode="tel"
+          autoComplete="tel"
+          pattern="^(?:\+64[\s-]?2\d[\s-]?\d{3}[\s-]?\d{4}|02\d{7,9})$"
+          title="Enter a valid New Zealand phone number"
+          className="rounded border border-gray-300 p-2 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
+
+        {/* Requirements */}
         <textarea
+          name="requirements"
           placeholder="Your Requirements"
-          className="p-2 border border-gray-300 rounded"
+          required
+          minLength={10}
+          maxLength={2000}
+          rows={5}
+          className="resize-none rounded border border-gray-300 p-2 outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
         />
+
+        {/* Consent */}
         <label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
           <input
+            name="consent"
+            value="yes"
             type="checkbox"
             required
             className="mt-1 h-4 w-4 shrink-0 accent-primary"
@@ -213,7 +361,7 @@ const Quote = () => {
             >
               Privacy Policy
             </Link>{" "}
-            and
+            and{" "}
             <Link
               href="/terms-and-conditions"
               className="font-semibold text-primary hover:underline"
@@ -223,13 +371,36 @@ const Quote = () => {
             .
           </span>
         </label>
+
+        {/* Submit */}
         <button
           type="submit"
-          className="p-2 bg-primary text-white rounded cursor-pointer hover:scale-101 transition-colors duration-300 shadow-lg"
+          disabled={isSubmitting}
+          className="rounded bg-primary p-2 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.01] hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Submit
+          {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
+
+      {/* Success / Error */}
+      {result && (
+        <div
+          role="alert"
+          className={`mt-4 rounded-lg border px-4 py-3 text-sm font-medium ${
+            result.type === "success"
+              ? "border-green-200 bg-green-50 text-green-700"
+              : "border-red-200 bg-red-50 text-red-700"
+          }`}
+        >
+          <div className="flex items-start gap-2">
+            <span className="font-bold">
+              {result.type === "success" ? "✓" : "!"}
+            </span>
+
+            <span>{result.message}</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

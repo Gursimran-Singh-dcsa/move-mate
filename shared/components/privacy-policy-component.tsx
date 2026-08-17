@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import { useEffect, useState } from "react";
 const NAV_IDS = [
   "information",
@@ -425,10 +425,10 @@ const PrivacyPolicyComponent = () => {
                   </p>
 
                   <a
-                    href="mailto:contact@movematerelocations.co.nz"
+                    href="mailto:info@movematerelocations.co.nz"
                     className="mt-5 inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition "
                   >
-                    <span className="text-white">contact@movematerelocations.co.nz</span>
+                    <span className="text-white">info@movematerelocations.co.nz</span>
                   </a>
                 </div>
               </section> */}

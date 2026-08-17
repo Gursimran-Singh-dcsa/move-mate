@@ -87,7 +87,7 @@ const Footer = () => {
               <div className="space-y-4 text-sm sm:text-base font-medium">
                 {/* Email */}
                 <a
-                  href="mailto:contact@movematerelocations.co.nz"
+                  href="mailto:info@movematerelocations.co.nz"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Email"
@@ -110,7 +110,7 @@ const Footer = () => {
                   </svg>
 
                   <span className="break-all sm:break-normal">
-                    contact@movematerelocations.co.nz
+                    info@movematerelocations.co.nz
                   </span>
                 </a>
 
