@@ -279,7 +279,7 @@ export default function Header() {
             ))}
           </div>
           <div className="mt-3 border-t border-slate-100 pt-4 flex flex-col gap-3 px-4">
-            <a href="tel:+19876543210" className="flex items-center gap-3">
+            <a href="tel:+64800119001" className="flex items-center gap-3">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50">
                 <svg
                   width="18"
