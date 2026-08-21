@@ -217,7 +217,7 @@ const Footer = () => {
                   </a>
 
                   <a
-                    href={`https://wa.me/64278555700?text=${encodeURIComponent("Hi MoveMate, I would like to know more about your services.")}`}
+                    href={`https://wa.me/64278555700?text=${encodeURIComponent("Hi Move Mate Relocations NZ, I would like to know more about your services.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="WhatsApp"
