@@ -273,7 +273,7 @@ const Footer = () => {
               href="https://gursimran.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline"
+              className="text-white font-bold underline "
             >
               Gursimran Singh
             </a>
