@@ -339,7 +339,7 @@ export default function TermsAndConditionsPage() {
                   <p className="text-sm leading-7 text-midnight-blue sm:text-base">
                     By accepting an email quote request or confirming the
                     booking through a third party, you agree to the terms and
-                    conditions of Furniture and Freight Distribution Group.
+                    conditions of Move Mate Relocations NZ.
                     These terms and conditions will be considered as a legal
                     contract between you and Move Mate Relocations NZ Our terms
                     and conditions are subject to change without prior notice.
