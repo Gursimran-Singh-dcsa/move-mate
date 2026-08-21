@@ -102,7 +102,7 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <a
-                    href="tel:+64800119001"
+                    href="tel:+64278555700"
                     className="group flex items-start gap-4"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       </p>
 
                       <p className="mt-1 text-base font-bold text-midnight-blue group-hover:text-primary">
-                        +64 800 119 001
+                        +64 27 855 5700
                       </p>
                     </div>
                   </a>
@@ -189,7 +189,9 @@ export default function ContactPage() {
                     </a>
 
                     <a
-                      href="#"
+                      href={`https://wa.me/64278555700?text=${encodeURIComponent("Hi MoveMate, I would like to know more about your services.")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label="WhatsApp"
                       className="transition-opacity hover:opacity-70"
                     >
