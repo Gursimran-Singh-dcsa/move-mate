@@ -268,7 +268,15 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-5 text-center">
           <p className="text-xs sm:text-sm md:text-base text-white/90">
             © {new Date().getFullYear()} Move Mate Relocations NZ. All rights
-            reserved.
+            reserved. | Designed & Developed by{" "}
+            <a
+              href="https://gursimran.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline"
+            >
+              Gursimran Singh
+            </a>
           </p>
         </div>
       </footer>
