@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GetQuoteButton } from "./getQuoteButton";
+import { triggerEvent } from "@/utils/gtm";
 
 const AboveHeader = () => {
   return (
@@ -126,6 +127,15 @@ export default function Header() {
   const pathName = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const isActive = (path: string) => pathName === path;
+  const links = useMemo(
+    () => [
+      { href: "/", label: "Home" },
+      { href: "/about-us/", label: "About Us" },
+      { href: "/services/", label: "Services" },
+      { href: "/contact/", label: "Contact Us" },
+    ],
+    [],
+  );
   return (
     <header className="top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md rounded-4xl">
       <div className="hidden sm:block">
@@ -146,34 +156,19 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-8 lg:flex">
-          <Link
-            href="/"
-            className={`relative py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/") ? "text-primary border-b-[3px]" : ""}`}
-          >
-            Home
-            <span className="absolute bottom-0 left-0 h-0.5 w-full bg-light-blue" />
-          </Link>
-
-          <Link
-            href="/about-us/"
-            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/about-us/") ? "text-primary border-b-[3px]" : ""}`}
-          >
-            About Us
-          </Link>
-
-          <Link
-            href="/services"
-            className={`py-7 text-[15px] font-semibold transition-colors hover:text-light-blue ${isActive("/services/") ? "text-primary border-b-[3px]" : ""}`}
-          >
-            Services
-          </Link>
-
-          <Link
-            href="/contact"
-            className={`py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive("/contact/") ? "text-primary border-b-[3px]" : ""}`}
-          >
-            Contact Us
-          </Link>
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() =>
+                triggerEvent("nav_click", { item: label, device: "desktop" })
+              }
+              className={`relative py-7 text-[15px] font-semibold  transition-colors hover:text-light-blue ${isActive(href) ? "text-primary border-b-[3px]" : ""}`}
+            >
+              {label}
+              <span className="absolute bottom-0 left-0 h-0.5 w-full bg-light-blue" />
+            </Link>
+          ))}
         </nav>
 
         {/* Right side */}
@@ -258,18 +253,14 @@ export default function Header() {
       {menuOpen && (
         <nav className="border-t border-slate-100 bg-white px-6 pb-6 lg:hidden">
           <div className="flex flex-col pt-2">
-            {(
-              [
-                { href: "/", label: "Home" },
-                { href: "/about-us/", label: "About Us" },
-                { href: "/services/", label: "Services" },
-                { href: "/contact/", label: "Contact Us" },
-              ] as const
-            ).map(({ href, label }) => (
+            {links.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  triggerEvent("nav_click", { item: label, device: "mobile" });
+                  setMenuOpen(false);
+                }}
                 className={`rounded-lg px-4 py-3 text-base font-semibold transition-colors hover:bg-slate-50 hover:text-primary ${
                   isActive(href) ? "text-primary" : "text-slate-700"
                 }`}
