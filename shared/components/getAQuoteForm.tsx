@@ -402,7 +402,22 @@ export const QuoteForm = () => {
             className="w-full resize-none rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/10"
           />
         </div>
+<label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
+          <input
+            id="winzQuoteEligibility"
+            name="winzQuoteEligibility"
+            value="yes"
+            type="checkbox"
+            required
+            className="mt-1 h-4 w-4 shrink-0 accent-primary"
+          />
 
+          <span>
+            I confirm that I am eligible for a WINZ quote and would like to request one. I understand that this is a special service and that I may be required to provide additional information to verify my eligibility.
+          </span>
+        </label>
+
+        
         {/* Privacy */}
         <label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
           <input

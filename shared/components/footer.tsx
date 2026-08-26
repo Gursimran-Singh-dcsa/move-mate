@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PhoneLink } from "./phoneLink";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -115,12 +116,10 @@ const Footer = () => {
                 </a>
 
                 {/* Phone */}
-                <a
+                <PhoneLink
                   href="tel:+64278555700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Call us at +64 800119001"
-                  className="flex items-center gap-3 hover:text-primary transition-colors"
+                  position="footer_phone_number"
+                  classNames="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +137,7 @@ const Footer = () => {
                   </svg>
 
                   <span>+64 27 855 5700</span>
-                </a>
+                </PhoneLink>
 
                 {/* Address */}
                 <a

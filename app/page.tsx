@@ -2,7 +2,7 @@ import { GetACallback } from "@/shared/components/getACallback";
 import { Services } from "@/shared/components/services";
 import { Statistics } from "@/shared/components/statistics";
 import StepsAndQuote from "@/shared/components/StepsAndQuote";
-
+import { WinzQuoteSection } from "@/shared/components/winzquote";
 export default function Home() {
   return (
     <div className="font-roboto  ">
@@ -12,6 +12,8 @@ export default function Home() {
           backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/nz_land.jpeg)`,
         }}
       >
+        <WinzQuoteSection />
+
         <div className="absolute inset-0 bg-black/70 z-0" />
         <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:px-16 lg:min-h-screen">
           {/* Heading */}

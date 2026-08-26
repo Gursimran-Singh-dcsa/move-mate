@@ -2,6 +2,8 @@ import Link from "next/link";
 import { GetACallback } from "@/shared/components/getACallback";
 import Image from "next/image";
 import { Metadata } from "next";
+import { triggerEvent } from "@/utils/gtm";
+import { PhoneLink } from "@/shared/components/phoneLink";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export const metadata: Metadata = {
@@ -101,9 +103,10 @@ export default function ContactPage() {
                   </a>
 
                   {/* Phone */}
-                  <a
+                  <PhoneLink
                     href="tel:+64278555700"
-                    className="group flex items-start gap-4"
+                    position="contact_page_phone_number"
+                    classNames="group flex items-start gap-4 "
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
                       <svg
@@ -130,7 +133,7 @@ export default function ContactPage() {
                         +64 27 855 5700
                       </p>
                     </div>
-                  </a>
+                  </PhoneLink>
 
                   {/* Opening Hours */}
                   <div className="flex items-start gap-4">

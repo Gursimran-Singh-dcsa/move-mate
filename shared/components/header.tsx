@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GetQuoteButton } from "./getQuoteButton";
 import { triggerEvent } from "@/utils/gtm";
+import { PhoneLink } from "./phoneLink";
 
 const AboveHeader = () => {
   return (
@@ -174,7 +175,11 @@ export default function Header() {
         {/* Right side */}
         <div className="hidden items-center gap-6 lg:flex">
           {/* Phone */}
-          <a href="tel:+64278555700" className="flex items-center gap-3">
+          <PhoneLink
+            classNames="flex items-center gap-3"
+            href="tel:+64278555700"
+            position="desktop_header_phone_number"
+          >
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-50 text-light-blue">
               {/* <Phone className="h-5 w-5" /> */}
               <svg
@@ -200,7 +205,7 @@ export default function Header() {
               </p>
               <p className="mt-1 text-xs text-slate-500">Call Us Anytime</p>
             </div>
-          </a>
+          </PhoneLink>
 
           {/* CTA */}
           <GetQuoteButton />
@@ -270,7 +275,11 @@ export default function Header() {
             ))}
           </div>
           <div className="mt-3 border-t border-slate-100 pt-4 flex flex-col gap-3 px-4">
-            <a href="tel:+64278555700" className="flex items-center gap-3">
+            <PhoneLink
+              classNames="flex items-center gap-3"
+              href="tel:+64278555700"
+              position="mobile_header_phone_number"
+            >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50">
                 <svg
                   width="18"
@@ -294,7 +303,7 @@ export default function Header() {
                 </p>
                 <p className="text-xs text-slate-500">Call Us Anytime</p>
               </div>
-            </a>
+            </PhoneLink>
             <GetQuoteButton />
           </div>
         </nav>
