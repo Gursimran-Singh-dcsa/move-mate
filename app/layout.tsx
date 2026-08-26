@@ -83,6 +83,7 @@ export const metadata: Metadata = {
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH}/move_mate_relocations_square_logo.jpeg`,
   },
 };
+
 const roboto = Roboto({
   variable: "--font-roboto",
 });
@@ -90,7 +91,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${roboto.variable} h-full antialiased`}>
       <head>
-        <meta name="google-site-verification" content="KYmdJtJKlF-jZ1Dd0CMGewCvq_A7B_3jXfR4ZN7_tU0" />
+        <meta
+          name="google-site-verification"
+          content="KYmdJtJKlF-jZ1Dd0CMGewCvq_A7B_3jXfR4ZN7_tU0"
+        />
         <GTMScript />
       </head>
       <body className="min-h-full flex flex-col  ">
