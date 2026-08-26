@@ -13,6 +13,7 @@ import { PhoneLink } from "./phoneLink";
 const AboveHeader = () => {
   return (
     <div className="bg-midnight-blue text-white max-w-8xl px-6 ">
+      <h1 className="sr-only">Move Mate Relocations NZ</h1>
       <div className="mx-auto flex h-16  items-center justify-between px-6 text-sm ">
         {/* Left */}
         <div className="flex items-center justify-between gap-6">

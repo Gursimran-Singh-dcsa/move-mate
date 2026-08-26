@@ -33,7 +33,7 @@ export const items = [
     title: "House Relocation",
     hashtags: ["#house", "#relocation", "#moving"],
     description:
-      "We provide comprehensive house relocation services, ensuring a smooth and stress-free move for your family.",
+      "Moving to a new home? Our team carefully handles your household belongings from packing and loading through to safe delivery.",
   },
   {
     imagePath: `${bp}/office_relocation.jpeg`,
@@ -41,7 +41,7 @@ export const items = [
     title: "Office Relocation",
     hashtags: ["#office", "#relocation", "#moving"],
     description:
-      "We provide comprehensive office relocation services, ensuring a smooth and stress-free move for your business.",
+      "Keep your business move organised with our office relocation service, covering desks, equipment, furniture and other workplace essentials.",
   },
   {
     imagePath: `${bp}/warehouse_relocation.jpeg`,
@@ -49,7 +49,7 @@ export const items = [
     title: "Warehouse Relocation",
     hashtags: ["#warehouse", "#relocation", "#moving"],
     description:
-      "We provide comprehensive warehouse relocation services, ensuring a smooth and stress-free move for your business.",
+      "Relocating a warehouse requires careful planning. We transport stock, equipment and other warehouse contents safely and efficiently.",
   },
   {
     imagePath: `${bp}/intercity_relocation.jpeg`,
@@ -57,7 +57,7 @@ export const items = [
     title: "Intercity Relocation",
     hashtags: ["#intercity", "#relocation", "#moving"],
     description:
-      "We provide comprehensive intercity relocation services, ensuring a smooth and stress-free move for your family.",
+      "Planning a move between cities? We coordinate long-distance transportation to get your belongings to their new destination safely and on time.",
   },
   {
     imagePath: `${bp}/single_item_movers.jpeg`,
@@ -65,7 +65,7 @@ export const items = [
     title: "Single Item Movers",
     hashtags: ["#single", "#item", "#moving", "#movers"],
     description:
-      "We provide reliable single item moving services, ensuring your valuable items are transported safely and efficiently.",
+      "Only need one item moved? We handle large, heavy or valuable pieces with careful loading, secure transportation and reliable delivery.",
   },
   {
     imagePath: `${bp}/furniture_removalists.jpeg`,
@@ -73,7 +73,7 @@ export const items = [
     title: "Furniture Removalists",
     hashtags: ["#furniture", "#removalists", "#moving"],
     description:
-      "We provide professional furniture removalist services, ensuring your furniture is moved safely and efficiently.",
+      "From bulky furniture to individual pieces, our removalists provide careful handling and dependable transportation to your chosen destination.",
   },
 ];
 

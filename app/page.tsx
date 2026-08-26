@@ -18,9 +18,9 @@ export default function Home() {
         <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:px-16 lg:min-h-screen">
           {/* Heading */}
           <div className="text-white">
-            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+            <h1 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
               Moving made
-            </h2>
+            </h1>
             <h2 className="text-4xl font-bold text-primary sm:text-6xl lg:text-8xl">
               Simple.
             </h2>
