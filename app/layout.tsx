@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_BASE_PATH}/full_logo.jpeg`,
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH}/move_mate_relocations_square_logo.jpeg`,
   },
 };
 const roboto = Roboto({
