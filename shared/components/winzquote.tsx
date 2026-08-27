@@ -3,7 +3,7 @@ import Link from "next/link";
 export const WinzQuoteSection = () => {
   return (
     <div
-      className="  lg:absolute right-8 top-0 z-10 lg:max-w-[250px] min-w-[100vw] lg:min-w-[250px] relative left-0 lg:left-auto  z-99"
+      className="  lg:absolute right-8 top-0 z-10 lg:max-w-[250px] max-w-[130px] min-w-[130px] lg:min-w-[250px] relative left-[calc(100vw-130px)] lg:left-auto  z-99"
       aria-label="WINZ Quote Section"
     >
       <Link href="/get-a-quote" aria-label="Get a WINZ Quote link">
@@ -57,14 +57,14 @@ export const WinzQuoteSection = () => {
           </div>
 
           {/* Divider */}
-          <div className="mx-auto my-3 h-px w-16 bg-gray-200" />
+          <div className="hidden lg:block mx-auto my-3 h-px w-16 bg-gray-200" />
 
-          <p className="text-[13px] font-semibold text-gray-600">
+          <p className="hidden lg:block text-[13px] font-semibold text-gray-600">
             Move Mate Relocations NZ
           </p>
 
           {/* Bottom ribbon */}
-          <div className="absolute bottom-0 left-1/2 h-5 w-24 -translate-x-1/2">
+          <div className="hidden lg:block absolute bottom-0 left-1/2 h-5 w-24 -translate-x-1/2">
             <div
               className="
               absolute left-0 top-0 h-full w-1/2
