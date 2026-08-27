@@ -81,6 +81,7 @@ export const metadata: Metadata = {
 
   icons: {
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH}/move_mate_relocations_square_logo.jpeg`,
+    apple: `${process.env.NEXT_PUBLIC_BASE_PATH}/move_mate_relocations_square_logo.jpeg`,
   },
 };
 
