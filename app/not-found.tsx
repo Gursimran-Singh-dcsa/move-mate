@@ -18,9 +18,9 @@ export default function NotFound() {
         </div>
 
         {/* Content */}
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
           Looks like this move went off route.
-        </h1>
+        </h2>
 
         <p className="mx-auto mt-4 max-w-lg text-sm leading-7 text-gray-600 sm:text-base">
           The page you&apos;re looking for may have moved, been removed, or

@@ -34,10 +34,10 @@ export default function AboutPage() {
               About Move Mate
             </p>
 
-            <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
               Moving made simple.
               <span className="block text-primary">Moving made with care.</span>
-            </h1>
+            </h2>
 
             <p className="mt-6 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
               We are a professional relocation and moving company helping
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2z" />
                   <path d="M8 8h8" />
                   <path d="M8 12h5" />
                 </svg>

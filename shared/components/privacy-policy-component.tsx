@@ -43,9 +43,9 @@ const PrivacyPolicyComponent = () => {
               Move Mate Relocations NZ
             </p>
 
-            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
               Privacy Policy
-            </h1>
+            </h2>
 
             <p className="mt-5 max-w-2xl text-sm leading-7 text-white/75 sm:text-base">
               Your privacy matters to us. This policy explains how we collect,

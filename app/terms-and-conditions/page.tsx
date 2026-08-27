@@ -76,9 +76,9 @@ export default function TermsAndConditionsPage() {
               Move Mate Relocations NZ
             </p>
 
-            <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Terms & Conditions
-            </h1>
+            </h2>
 
             <p className="mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
               Please read these terms and conditions carefully before booking or

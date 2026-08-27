@@ -32,9 +32,9 @@ export default function GetAQuotePage() {
             Move Mate Relocations NZ
           </p>
 
-          <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Get a Quote
-          </h1>
+          </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
             Planning a move? Tell us a little about what you need and our team

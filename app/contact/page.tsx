@@ -35,9 +35,9 @@ export default function ContactPage() {
             Move Mate Relocations NZ
           </p>
 
-          <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Get in Touch
-          </h1>
+          </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
             Planning a move or have a question? Our team is here to help. Get in
