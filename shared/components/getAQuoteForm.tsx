@@ -175,7 +175,7 @@ export const QuoteForm = () => {
           message: "Sorry, we couldn't submit your request. Please try again.",
         });
       }
-      gtag("event", "conversion", {
+      (window as any).gtag("event", "conversion", {
         send_to: "AW-18371550412/cxx0CJ-g9ukcEL63nrhE",
         value: 1.0,
         currency: "NZD",

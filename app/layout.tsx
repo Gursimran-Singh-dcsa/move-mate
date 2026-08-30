@@ -99,10 +99,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <GTMScript />
         <script>
-          {gtag("event", "ads_conversation_Contact_Us_1", {})}
-
-          
-         
+          {typeof window !== "undefined" && (window as any).gtag("event", "ads_conversation_Contact_Us_1", {})}
         </script>
       </head>
       <body className="min-h-full flex flex-col  ">
