@@ -5,3 +5,8 @@ export const phoneNumberClickEvent = (position: string) => {
     position
   })
 }
+export const quoteFormSubmit = () => {
+  triggerEvent('quote_form_submit', {
+    form_name: 'quote_form'
+  })
+}
