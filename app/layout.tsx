@@ -20,6 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     />
   );
 };
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://movematerelocations.co.nz/"),
 
@@ -97,6 +98,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           content="KYmdJtJKlF-jZ1Dd0CMGewCvq_A7B_3jXfR4ZN7_tU0"
         />
         <GTMScript />
+        <script>
+          {gtag("event", "ads_conversation_Contact_Us_1", {})}
+
+          
+         
+        </script>
       </head>
       <body className="min-h-full flex flex-col  ">
         <noscript>

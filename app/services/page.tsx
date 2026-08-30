@@ -5,6 +5,14 @@ import Link from "next/link";
 const Services = () => {
   return (
     <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+      <script>
+        {" "}
+        {gtag("event", "conversion", {
+          send_to: "AW-18371550412/tlFPCP-g9ukcEL63nrhE",
+          value: 1.0,
+          currency: "NZD",
+        })}
+      </script>
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}
         <div className="mx-auto max-w-2xl text-center">

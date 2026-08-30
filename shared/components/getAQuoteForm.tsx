@@ -38,8 +38,7 @@ export const QuoteForm = () => {
     const email = formData.get("email")?.toString().trim() || "";
     const phone = formData.get("phone")?.toString().trim() || "";
     const service = formData.get("service")?.toString() || "";
-    const movingFrom =
-      formData.get("movingFrom")?.toString().trim() || "";
+    const movingFrom = formData.get("movingFrom")?.toString().trim() || "";
     const movingTo = formData.get("movingTo")?.toString().trim() || "";
     const movingDate = formData.get("movingDate")?.toString() || "";
     const message = formData.get("message")?.toString().trim() || "";
@@ -143,8 +142,7 @@ export const QuoteForm = () => {
     if (consent !== "yes") {
       setResult({
         type: "error",
-        message:
-          "Please agree to our Privacy Policy and Terms and Conditions.",
+        message: "Please agree to our Privacy Policy and Terms and Conditions.",
       });
       return;
     }
@@ -152,24 +150,14 @@ export const QuoteForm = () => {
     try {
       setIsSubmitting(true);
 
-      formData.set(
-        "access_key",
-        "a554da7a-dfaf-438a-a206-d33741f36375"
-      );
+      formData.set("access_key", "a554da7a-dfaf-438a-a206-d33741f36375");
 
-      formData.set(
-        "subject",
-        "New Quote Request - Move Mate Relocations NZ"
-      );
+      formData.set("subject", "New Quote Request - Move Mate Relocations NZ");
 
-
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
       const data = await response.json();
 
@@ -184,10 +172,14 @@ export const QuoteForm = () => {
       } else {
         setResult({
           type: "error",
-          message:
-            "Sorry, we couldn't submit your request. Please try again.",
+          message: "Sorry, we couldn't submit your request. Please try again.",
         });
       }
+      gtag("event", "conversion", {
+        send_to: "AW-18371550412/cxx0CJ-g9ukcEL63nrhE",
+        value: 1.0,
+        currency: "NZD",
+      });
     } catch (error) {
       console.error("Quote request error:", error);
 
@@ -203,17 +195,10 @@ export const QuoteForm = () => {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit}
-        noValidate
-        className="space-y-5"
-      >
+      <form onSubmit={handleSubmit} noValidate className="space-y-5">
         {/* Name */}
         <div>
-          <label
-            htmlFor="name"
-            className="mb-2 block text-sm font-semibold"
-          >
+          <label htmlFor="name" className="mb-2 block text-sm font-semibold">
             Full Name
           </label>
 
@@ -233,10 +218,7 @@ export const QuoteForm = () => {
         {/* Email + Phone */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div>
-            <label
-              htmlFor="email"
-              className="mb-2 block text-sm font-semibold"
-            >
+            <label htmlFor="email" className="mb-2 block text-sm font-semibold">
               Email Address
             </label>
 
@@ -253,10 +235,7 @@ export const QuoteForm = () => {
           </div>
 
           <div>
-            <label
-              htmlFor="phone"
-              className="mb-2 block text-sm font-semibold"
-            >
+            <label htmlFor="phone" className="mb-2 block text-sm font-semibold">
               Phone Number
             </label>
 
@@ -277,10 +256,7 @@ export const QuoteForm = () => {
 
         {/* Service */}
         <div>
-          <label
-            htmlFor="service"
-            className="mb-2 block text-sm font-semibold"
-          >
+          <label htmlFor="service" className="mb-2 block text-sm font-semibold">
             What are you moving?
           </label>
 
@@ -295,29 +271,17 @@ export const QuoteForm = () => {
               Select a service
             </option>
 
-            <option value="House Relocation">
-              House Relocation
-            </option>
+            <option value="House Relocation">House Relocation</option>
 
-            <option value="Office Relocation">
-              Office Relocation
-            </option>
+            <option value="Office Relocation">Office Relocation</option>
 
-            <option value="Warehouse Relocation">
-              Warehouse Relocation
-            </option>
+            <option value="Warehouse Relocation">Warehouse Relocation</option>
 
-            <option value="Intercity Relocation">
-              Intercity Relocation
-            </option>
+            <option value="Intercity Relocation">Intercity Relocation</option>
 
-            <option value="Single Item Movers">
-              Single Item Movers
-            </option>
+            <option value="Single Item Movers">Single Item Movers</option>
 
-            <option value="Furniture Removalists">
-              Furniture Removalists
-            </option>
+            <option value="Furniture Removalists">Furniture Removalists</option>
           </select>
         </div>
 
@@ -384,10 +348,7 @@ export const QuoteForm = () => {
 
         {/* Message */}
         <div>
-          <label
-            htmlFor="message"
-            className="mb-2 block text-sm font-semibold"
-          >
+          <label htmlFor="message" className="mb-2 block text-sm font-semibold">
             Tell us more
           </label>
 
@@ -402,7 +363,7 @@ export const QuoteForm = () => {
             className="w-full resize-none rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/10"
           />
         </div>
-<label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
+        <label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
           <input
             id="winzQuoteEligibility"
             name="winzQuoteEligibility"
@@ -413,11 +374,13 @@ export const QuoteForm = () => {
           />
 
           <span>
-            I confirm that I am eligible for a WINZ quote and would like to request one. I understand that this is a special service and that I may be required to provide additional information to verify my eligibility.
+            I confirm that I am eligible for a WINZ quote and would like to
+            request one. I understand that this is a special service and that I
+            may be required to provide additional information to verify my
+            eligibility.
           </span>
         </label>
 
-        
         {/* Privacy */}
         <label className="flex items-start gap-3 text-xs leading-5 text-gray-500">
           <input
