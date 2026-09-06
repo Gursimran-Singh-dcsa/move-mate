@@ -33,13 +33,17 @@ export const metadata: Metadata = {
     "Move Mate Relocations NZ provides professional house, office, warehouse and intercity relocation services across New Zealand.",
 
   keywords: [
+    "Move Mate Relocations",
+    "Hamilton furniture movers",
+    "Tauranga furniture movers",
+    "Huntly furniture movers",
+    "Auckland furniture movers",
     "moving company New Zealand",
     "relocation services NZ",
     "house movers Auckland",
     "office relocation Auckland",
     "furniture removalists Auckland",
     "intercity movers New Zealand",
-    "Move Mate Relocations",
   ],
 
   authors: [
@@ -98,7 +102,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           content="KYmdJtJKlF-jZ1Dd0CMGewCvq_A7B_3jXfR4ZN7_tU0"
         />
         <GTMScript />
-        
       </head>
       <body className="min-h-full flex flex-col  ">
         <noscript>
