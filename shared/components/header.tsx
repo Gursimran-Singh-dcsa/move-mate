@@ -134,6 +134,7 @@ export default function Header() {
       { href: "/", label: "Home" },
       { href: "/about-us/", label: "About Us" },
       { href: "/services/", label: "Services" },
+      { href: "/blog/", label: "Blogs" },
       { href: "/contact/", label: "Contact Us" },
     ],
     [],

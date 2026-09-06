@@ -3,6 +3,8 @@ import { Services } from "@/shared/components/services";
 import { Statistics } from "@/shared/components/statistics";
 import StepsAndQuote from "@/shared/components/StepsAndQuote";
 import { WinzQuoteSection } from "@/shared/components/winzquote";
+import Link from "next/link";
+import { seoBlogs } from "@/utils/seoBlogs";
 export default function Home() {
   return (
     <div className="font-roboto  ">
@@ -50,6 +52,54 @@ export default function Home() {
       </div>{" "}
       <Statistics />
       <Services />
+      <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              Blogs
+            </p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Local moving guides across New Zealand
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+              Read location-specific moving articles and planning advice from
+              our relocation team.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {seoBlogs.map((blog) => (
+              <article
+                key={blog.slug}
+                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                  {blog.city}
+                </p>
+                <h3 className="mt-2 text-lg font-extrabold tracking-tight">
+                  {blog.keyword}
+                </h3>
+                <Link
+                  href={`/blog/${blog.slug}`}
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary"
+                >
+                  Read Article
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/blog"
+              className="text-sm font-bold text-primary underline"
+            >
+              Explore all blogs
+            </Link>
+          </div>
+        </div>
+      </section>
       <GetACallback />
       <StepsAndQuote />
     </div>
