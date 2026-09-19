@@ -19,6 +19,6 @@ export const getACallbackFormSubmit = () => {
 
 export const socialMediaClickEvent = (platform: string) => {
   triggerEvent("social_media_click", {
-    "Social Media Platform": platform,
+    platform: platform,
   });
 };
