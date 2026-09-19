@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { GetQuoteButton } from "./getQuoteButton";
 import { triggerEvent } from "@/utils/gtm";
 import { PhoneLink } from "./phoneLink";
+import { EmailLink, SocialLink } from "./socialLink";
 
 const AboveHeader = () => {
   return (
@@ -57,12 +58,12 @@ const AboveHeader = () => {
               <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
             </svg>{" "}
-            <a
+            <EmailLink
               href="mailto:info@movematerelocations.co.nz"
               className=" transition-colors hover:text-blue-300 md:flex"
             >
               info@movematerelocations.co.nz
-            </a>
+            </EmailLink>
           </span>
         </div>
 
@@ -93,32 +94,27 @@ const AboveHeader = () => {
 
           <span className="hidden font-medium lg:block">Follow Us:</span>
 
-          <a
+          <SocialLink
             href="https://www.facebook.com/profile.php?id=61593218276561"
-            aria-label="Facebook"
+            ariaLabel="Facebook"
+            platform="facebook"
+            iconSrc={`${bp}/facebook.png`}
+            iconAlt="Facebook"
+            width={18}
+            height={18}
             className="transition-colors hover:text-blue-300"
-          >
-            <Image
-              src={`${bp}/facebook.png`}
-              alt="Facebook"
-              width={18}
-              height={18}
-            />
-          </a>
+          />
 
-          <a
+          <SocialLink
             href="https://www.instagram.com/movematerelocationsnz"
-            aria-label="Instagram"
+            ariaLabel="Instagram"
+            platform="instagram"
+            iconSrc={`${bp}/instagram-optimized.svg`}
+            iconAlt="Instagram"
+            width={18}
+            height={18}
             className="transition-colors hover:text-blue-300"
-          >
-            <Image
-              src={`${bp}/instagram-optimized.svg`}
-              alt="Instagram"
-              width={18}
-              height={18}
-              className=""
-            />
-          </a>
+          />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PhoneLink } from "./phoneLink";
+import { SocialLink } from "./socialLink";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -189,46 +190,35 @@ const Footer = () => {
 
                 {/* Social */}
                 <div className="flex flex-wrap items-center gap-4 pt-1">
-                  <a
+                  <SocialLink
                     href="https://www.facebook.com/profile.php?id=61593218276561"
-                    aria-label="Facebook"
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    <Image
-                      src={`${bp}/facebook.png`}
-                      alt="Facebook"
-                      width={20}
-                      height={20}
-                    />
-                  </a>
+                    ariaLabel="Facebook"
+                    platform="facebook"
+                    iconSrc={`${bp}/facebook.png`}
+                    iconAlt="Facebook"
+                    width={20}
+                    height={20}
+                  />
 
-                  <a
+                  <SocialLink
                     href="https://www.instagram.com/movematerelocationsnz"
-                    aria-label="Instagram"
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    <Image
-                      src={`${bp}/instagram-optimized.svg`}
-                      alt="Instagram"
-                      width={20}
-                      height={20}
-                    />
-                  </a>
+                    ariaLabel="Instagram"
+                    platform="instagram"
+                    iconSrc={`${bp}/instagram-optimized.svg`}
+                    iconAlt="Instagram"
+                    width={20}
+                    height={20}
+                  />
 
-                  <a
+                  <SocialLink
                     href={`https://wa.me/64278555700?text=${encodeURIComponent("Hi Move Mate Relocations NZ, I would like to know more about your services.")}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    <Image
-                      src={`${bp}/whatsapp.svg`}
-                      alt="WhatsApp"
-                      width={20}
-                      height={20}
-                    />
-                  </a>
+                    ariaLabel="WhatsApp"
+                    platform="whatsapp"
+                    iconSrc={`${bp}/whatsapp.svg`}
+                    iconAlt="WhatsApp"
+                    width={20}
+                    height={20}
+                  />
 
                   <span className="hidden sm:block h-5 w-px bg-gray-300" />
 

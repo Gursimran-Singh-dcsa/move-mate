@@ -1,5 +1,6 @@
 "use client";
 
+import { quoteFormSubmit } from "@/utils/triggers";
 import Link from "next/link";
 import { FormEvent, useMemo, useState } from "react";
 
@@ -167,6 +168,7 @@ export const QuoteForm = () => {
           message:
             "Thank you! Your quote request has been submitted successfully. Our team will review your requirements and get back to you shortly.",
         });
+        quoteFormSubmit();
 
         form.reset();
       } else {

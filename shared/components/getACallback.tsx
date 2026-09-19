@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState, useMemo } from "react";
+import { getACallbackFormSubmit } from "@/utils/triggers";
 
 export const GetACallback = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,10 +81,7 @@ export const GetACallback = () => {
     try {
       setIsSubmitting(true);
 
-      formData.set(
-        "access_key",
-        "c818ac59-d55d-4c6b-ba47-9169731209d9"
-      );
+      formData.set("access_key", "c818ac59-d55d-4c6b-ba47-9169731209d9");
 
       // Optional: makes the email easier to understand
       formData.set("subject", "Callback Request - Move Mate Relocations NZ");
@@ -103,12 +101,12 @@ export const GetACallback = () => {
             "Thanks! Your callback request has been received. We’ll call you at your selected time.",
         });
 
+        getACallbackFormSubmit();
         form.reset();
       } else {
         setResult({
           type: "error",
-          message:
-            "Sorry, we couldn't submit your request. Please try again.",
+          message: "Sorry, we couldn't submit your request. Please try again.",
         });
       }
     } catch (error) {
@@ -181,42 +179,18 @@ export const GetACallback = () => {
                   Select time
                 </option>
 
-                <option value="8:00 AM - 9:00 AM">
-                  8:00 AM - 9:00 AM
-                </option>
-                <option value="9:00 AM - 10:00 AM">
-                  9:00 AM - 10:00 AM
-                </option>
-                <option value="10:00 AM - 11:00 AM">
-                  10:00 AM - 11:00 AM
-                </option>
-                <option value="11:00 AM - 12:00 PM">
-                  11:00 AM - 12:00 PM
-                </option>
-                <option value="12:00 PM - 1:00 PM">
-                  12:00 PM - 1:00 PM
-                </option>
-                <option value="1:00 PM - 2:00 PM">
-                  1:00 PM - 2:00 PM
-                </option>
-                <option value="2:00 PM - 3:00 PM">
-                  2:00 PM - 3:00 PM
-                </option>
-                <option value="3:00 PM - 4:00 PM">
-                  3:00 PM - 4:00 PM
-                </option>
-                <option value="4:00 PM - 5:00 PM">
-                  4:00 PM - 5:00 PM
-                </option>
-                <option value="5:00 PM - 6:00 PM">
-                  5:00 PM - 6:00 PM
-                </option>
-                <option value="6:00 PM - 7:00 PM">
-                  6:00 PM - 7:00 PM
-                </option>
-                <option value="7:00 PM - 8:00 PM">
-                  7:00 PM - 8:00 PM
-                </option>
+                <option value="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</option>
+                <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                <option value="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</option>
+                <option value="6:00 PM - 7:00 PM">6:00 PM - 7:00 PM</option>
+                <option value="7:00 PM - 8:00 PM">7:00 PM - 8:00 PM</option>
               </select>
 
               <svg
