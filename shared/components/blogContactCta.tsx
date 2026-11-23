@@ -36,8 +36,8 @@ export function BlogContactCta({ slug }: { slug: string }) {
           <span className="font-semibold text-white/70">Email: </span>
           <TrackedLink
             href={`mailto:${EMAIL}`}
-            eventName="email_click"
-            eventData={{ position }}
+            eventName="social_media_click"
+            eventData={{ platform: "email", position }}
             className="font-bold underline underline-offset-4 hover:text-white/80"
           >
             {EMAIL}

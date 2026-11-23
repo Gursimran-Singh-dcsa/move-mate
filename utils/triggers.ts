@@ -23,12 +23,6 @@ export const socialMediaClickEvent = (platform: string) => {
   });
 };
 
-export const emailClickEvent = (position: string) => {
-  triggerEvent("email_click", {
-    position,
-  });
-};
-
 export const quoteLinkClickEvent = (position: string) => {
   triggerEvent("quote_link_click", {
     position,

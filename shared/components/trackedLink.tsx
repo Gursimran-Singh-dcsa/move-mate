@@ -5,7 +5,7 @@ import { triggerEvent } from "@/utils/gtm";
 
 type TrackedLinkProps = {
   href: string;
-  /** GTM dataLayer event name, e.g. "email_click" */
+  /** GTM dataLayer event name, e.g. "social_media_click" */
   eventName: string;
   /** GTM event params, e.g. { position: "blog_cta" } */
   eventData?: Record<string, string>;
