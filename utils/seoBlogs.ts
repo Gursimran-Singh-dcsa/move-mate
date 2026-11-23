@@ -58,8 +58,8 @@ export const seoBlogs: SeoBlog[] = [
     stats: [
       { label: "Job", value: "4 bedroom house" },
       { label: "Route", value: "Mokau to Waikura Valley" },
-      { label: "Pick-up", value: "1 hour" },
-      { label: "Travel to destination", value: "45 minutes" },
+      { label: "Pick-up", value: "3 hours" },
+      { label: "Travel to destination", value: "7 hours" },
       { label: "Damaged items", value: "0" },
       { label: "Conditions", value: "Heavy rain" },
     ],
@@ -79,9 +79,9 @@ export const seoBlogs: SeoBlog[] = [
         ],
       },
       {
-        heading: "1 hour to pick up, 45 minutes to your new home",
+        heading: "3 hours to pick up, 7 hours to your new home",
         paragraphs: [
-          "Pick-up took about 1 hour, and the drive to the Waikura Valley destination took about 45 minutes. We arrived at the new site on schedule, even on a narrow, wet country road.",
+          "Pick-up took about 3 hours, and the drive to the Waikura Valley destination took about 7 hours. We arrived at the new site on schedule, even on a narrow, wet country road.",
           "Clear timing matters when you are moving a family. You should know when the truck will be loaded, when it will arrive and when you can start settling in.",
         ],
       },
@@ -137,7 +137,7 @@ export const seoBlogs: SeoBlog[] = [
       {
         question: "How long does a 4 bedroom house move take?",
         answer:
-          "It depends on volume, access and distance. On our Mokau to Waikura Valley job, pick-up took about 1 hour and the drive to the destination took about 45 minutes.",
+          "It depends on volume, access and distance. On our Mokau to Waikura Valley job, pick-up took about 3 hours and the drive to the destination took about 7 hours.",
       },
       {
         question: "Do you service rural areas like Mokau and Waikura Valley?",
