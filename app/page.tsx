@@ -4,6 +4,7 @@ import { Statistics } from "@/shared/components/statistics";
 import StepsAndQuote from "@/shared/components/StepsAndQuote";
 import { WinzQuoteSection } from "@/shared/components/winzquote";
 import Link from "next/link";
+import { BlogCard } from "@/shared/components/blogCard";
 import { seoBlogs } from "@/utils/seoBlogs";
 export default function Home() {
   return (
@@ -52,51 +53,39 @@ export default function Home() {
       </div>{" "}
       <Statistics />
       <Services />
-      <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+      <section className="bg-gray-50 px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-              Blogs
-            </p>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Local moving guides across New Zealand
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
-              Read location-specific moving articles and planning advice from
-              our relocation team.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {seoBlogs.map((blog) => (
-              <article
-                key={blog.slug}
-                className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                  {blog.city}
-                </p>
-                <h3 className="mt-2 text-lg font-extrabold tracking-tight">
-                  {blog.keyword}
-                </h3>
-                <Link
-                  href={`/blog/${blog.slug}`}
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary"
-                >
-                  Read Article
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
+          <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+            <div className="max-w-2xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+                From the blog
+              </p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Local moving guides across New Zealand
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+                Read location-specific moving articles and planning advice from
+                our relocation team.
+              </p>
+            </div>
             <Link
               href="/blog"
-              className="text-sm font-bold text-primary underline"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md border-2 border-primary px-6 py-2.5 text-sm font-bold text-primary transition hover:bg-primary hover:text-white"
             >
               Explore all blogs
+              <span aria-hidden="true">→</span>
             </Link>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {seoBlogs.slice(0, 4).map((blog) => (
+              <BlogCard
+                key={blog.slug}
+                blog={blog}
+                variant="compact"
+                headingLevel="h3"
+              />
+            ))}
           </div>
         </div>
       </section>
