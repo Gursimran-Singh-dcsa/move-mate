@@ -21,18 +21,21 @@ export default function Home() {
         <div className="relative z-10 flex flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-center lg:px-16 lg:min-h-screen">
           {/* Heading */}
           <div className="text-white">
-            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+            <h1 className="text-lg font-bold uppercase tracking-[0.15em] text-white/80 sm:text-2xl">
+              House &amp; Furniture Movers in Waikato, Auckland &amp; Bay of Plenty
+            </h1>
+            <p className="mt-4 text-4xl font-bold sm:text-6xl lg:text-8xl">
               Moving made
-            </h2>
-            <h2 className="text-4xl font-bold text-primary sm:text-6xl lg:text-8xl">
+            </p>
+            <p className="text-4xl font-bold text-primary sm:text-6xl lg:text-8xl">
               Simple.
-            </h2>
-            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+            </p>
+            <p className="text-4xl font-bold sm:text-6xl lg:text-8xl">
               Stress-free &
-            </h2>
-            <h2 className="text-4xl font-bold sm:text-6xl lg:text-8xl">
+            </p>
+            <p className="text-4xl font-bold sm:text-6xl lg:text-8xl">
               reliable.
-            </h2>
+            </p>
           </div>
           {/* CTAs */}
           <div className="flex flex-col gap-4 lg:flex-grow lg:items-center">
@@ -61,7 +64,7 @@ export default function Home() {
                 From the blog
               </p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Local moving guides across New Zealand
+                Local moving guides for Waikato, Auckland &amp; Bay of Plenty
               </h2>
               <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
                 Read location-specific moving articles and planning advice from
@@ -87,6 +90,30 @@ export default function Home() {
               />
             ))}
           </div>
+        </div>
+      </section>
+      <section className="px-5 py-12 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Where we work
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+            Move Mate Relocations is based in Te Kauwhata, Waikato. We move
+            homes, offices and furniture in Huntly, Hamilton, Mokau, Auckland
+            and Tauranga, and take intercity jobs across New Zealand.
+          </p>
+          <ul className="mt-6 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+            {["Te Kauwhata", "Huntly", "Hamilton", "Mokau", "Auckland", "Tauranga"].map(
+              (town) => (
+                <li
+                  key={town}
+                  className="rounded-full bg-primary/10 px-4 py-2 text-primary"
+                >
+                  {town}
+                </li>
+              ),
+            )}
+          </ul>
         </div>
       </section>
       <GetACallback />

@@ -1,16 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceComponent = ({
   imagePath,
   imageAlt,
   title,
   description,
-  hashtags = [],
+  slug,
 }: {
   imagePath: string;
   title: string;
   description: string;
   imageAlt: string;
+  slug?: string;
   hashtags?: string[];
 }) => {
   return (
@@ -30,16 +32,14 @@ const ServiceComponent = ({
           </div>
           <p className="text-gray-700 text-base text-center">{description}</p>
         </div>
-        {hashtags.length ? (
-          <div className="px-6 pt-4 pb-2 bg-gray-100">
-            {hashtags.map((hashtag) => (
-              <span
-                key={hashtag}
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >
-                {hashtag}
-              </span>
-            ))}
+        {slug ? (
+          <div className="px-6 pb-4 bg-gray-100 text-center">
+            <Link
+              href={`/services/${slug}/`}
+              className="text-sm font-bold text-primary hover:underline"
+            >
+              Learn more about {title} →
+            </Link>
           </div>
         ) : null}
       </div>

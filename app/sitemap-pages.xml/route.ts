@@ -1,3 +1,4 @@
+import { serviceDetails, servicePath } from "@/utils/serviceDetails";
 import { urlset, xmlResponse, type SitemapEntry } from "@/utils/sitemap";
 
 export const dynamic = "force-static";
@@ -5,6 +6,11 @@ export const dynamic = "force-static";
 const pages: SitemapEntry[] = [
   { path: "/", priority: 1, changefreq: "weekly" },
   { path: "/services/", priority: 0.9, changefreq: "monthly" },
+  ...serviceDetails.map((s) => ({
+    path: servicePath(s.slug),
+    priority: 0.8,
+    changefreq: "monthly" as const,
+  })),
   { path: "/get-a-quote/", priority: 0.9, changefreq: "monthly" },
   { path: "/about-us/", priority: 0.7, changefreq: "yearly" },
   { path: "/contact/", priority: 0.7, changefreq: "yearly" },

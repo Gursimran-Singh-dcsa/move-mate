@@ -8,7 +8,7 @@ type CountUpProps = {
 };
 
 const CountUp = ({ end, duration = 1500 }: CountUpProps) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(end);
   const ref = useRef<HTMLSpanElement>(null);
   const animated = useRef(false);
 
@@ -23,6 +23,12 @@ const CountUp = ({ end, duration = 1500 }: CountUpProps) => {
 
         animated.current = true;
 
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          return;
+        }
+
+        setCount(0);
+
         const startTime = performance.now();
 
         const updateCount = (currentTime: number) => {
@@ -34,7 +40,9 @@ const CountUp = ({ end, duration = 1500 }: CountUpProps) => {
           // Smooth ease-out
           const easedProgress = 1 - Math.pow(1 - progress, 3);
 
-          setCount(Math.floor(easedProgress * end));
+          setCount(
+            progress < 1 ? Math.floor(easedProgress * end) : end
+          );
 
           if (progress < 1) {
             requestAnimationFrame(updateCount);

@@ -1,7 +1,18 @@
-"use client";
-import { items } from "@/shared/components/services";
+import type { Metadata } from "next";
+import { items } from "@/utils/serviceItems";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata: Metadata = {
+  title: "Moving & Relocation Services",
+  description:
+    "Explore professional house, office, warehouse, intercity, single item and furniture relocation services from Move Mate Relocations NZ.",
+  openGraph: {
+    title: "Moving & Relocation Services | Move Mate NZ",
+    description:
+      "Professional moving solutions for homes, offices, warehouses, intercity moves, single items and furniture across New Zealand.",
+  },
+};
+
 const Services = () => {
   return (
     <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
@@ -13,9 +24,9 @@ const Services = () => {
             What We Do
           </p>
 
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Relocation solutions for every move
-          </h2>
+          <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Moving &amp; Relocation Services in Waikato, Auckland &amp; Bay of Plenty
+          </h1>
 
           <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
             Whatever you are moving, our experienced team is here to make the
@@ -45,22 +56,10 @@ const Services = () => {
 
               {/* Content */}
               <div className="flex flex-1 flex-col p-5 sm:p-6">
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {item.hashtags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-semibold text-primary"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
                 {/* Title */}
-                <h3 className="mt-4 text-xl font-extrabold tracking-tight">
-                  {item.title}
-                </h3>
+                <h2 className="text-xl font-extrabold tracking-tight">
+                  <Link href={`/services/${item.slug}/`}>{item.title}</Link>
+                </h2>
 
                 {/* Description */}
                 <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
@@ -70,10 +69,10 @@ const Services = () => {
                 {/* CTA */}
                 <div className="mt-6 border-t border-gray-100 pt-5">
                   <Link
-                    href={`/get-a-quote`}
+                    href={`/services/${item.slug}/`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-primary transition group-hover:gap-3"
                   >
-                    Get a Quote
+                    Learn more
                     <span aria-hidden="true" className="text-lg leading-none">
                       →
                     </span>

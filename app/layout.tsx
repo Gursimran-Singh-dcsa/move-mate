@@ -4,6 +4,11 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/shared/components/header";
 import Footer from "@/shared/components/footer";
+import {
+  jsonLdString,
+  localBusinessJsonLd,
+  websiteJsonLd,
+} from "@/utils/business";
 
 const GTMScript = () => {
   return (
@@ -54,6 +59,10 @@ export const metadata: Metadata = {
 
   creator: "Move Mate Relocations NZ",
 
+  alternates: {
+    canonical: "./",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -102,6 +111,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           content="KYmdJtJKlF-jZ1Dd0CMGewCvq_A7B_3jXfR4ZN7_tU0"
         />
         <GTMScript />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLdString([localBusinessJsonLd, websiteJsonLd]),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col  ">
         <noscript>

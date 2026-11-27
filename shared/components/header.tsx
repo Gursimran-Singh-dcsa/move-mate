@@ -14,7 +14,6 @@ import { EmailLink, SocialLink } from "./socialLink";
 const AboveHeader = () => {
   return (
     <div className="bg-midnight-blue text-white max-w-8xl px-6 ">
-      <h1 className="sr-only">Move Mate Relocations NZ</h1>
       <div className="mx-auto flex h-16  items-center justify-between px-6 text-sm ">
         {/* Left */}
         <div className="flex items-center justify-between gap-6">
@@ -201,7 +200,7 @@ export default function Header() {
               <p className="text-[16px] font-bold text-light-blue">
                 +64 27 855 5700{" "}
               </p>
-              <p className="mt-1 text-xs text-slate-500">Call Us Anytime</p>
+              <p className="mt-1 text-xs text-slate-500">Open daily 8am – 8pm</p>
             </div>
           </PhoneLink>
 
@@ -299,7 +298,7 @@ export default function Header() {
                 <p className="text-sm font-bold text-light-blue">
                   +64 27 855 5700{" "}
                 </p>
-                <p className="text-xs text-slate-500">Call Us Anytime</p>
+                <p className="text-xs text-slate-500">Open daily 8am – 8pm</p>
               </div>
             </PhoneLink>
             <GetQuoteButton />
